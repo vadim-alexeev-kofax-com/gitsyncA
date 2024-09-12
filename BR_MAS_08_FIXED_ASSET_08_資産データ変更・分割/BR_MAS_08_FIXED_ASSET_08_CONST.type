@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.7.6</version>
+      <version>10.2.0.0</version>
+      <version>11.1.0.6</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FROM_MAIL_ADDRESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">fd-robo@mhi.com</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING1</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">01.MHI環境1\</property>
+      <property name="comment" class="String">robo1</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING2</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">02.MHI環境2\</property>
+      <property name="comment" class="String">robo2</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING3</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">11.MHPS環境1\</property>
+      <property name="comment" class="String">robo3</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING4</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">12.MHPS環境2\</property>
+      <property name="comment" class="String">robo4</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING5</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">21.事業会社環境1\</property>
+      <property name="comment" class="String">robo5</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING6</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">22.事業会社環境2\</property>
+      <property name="comment" class="String">robo6</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING7</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">31.G会社環境1\</property>
+      <property name="comment" class="String">robo7</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING8</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">32.G会社環境2\</property>
+      <property name="comment" class="String">robo8</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING9</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">41.全環境1\</property>
+      <property name="comment" class="String">robo9</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING10</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">42.全環境2\</property>
+      <property name="comment" class="String">robo10</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING11</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">03.MHI環境3\</property>
+      <property name="comment" class="String">robo11
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING12</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">04.MHI環境4\</property>
+      <property name="comment" class="String">robo12</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING13</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">05.MHI環境5\</property>
+      <property name="comment" class="String">robo13</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING14</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">13.MHPS環境3\</property>
+      <property name="comment" class="String">robo14</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING15</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">23.事業会社環境3\</property>
+      <property name="comment" class="String">robo15</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING16</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">33.G会社環境3\</property>
+      <property name="comment" class="String">robo16</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING17</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">34.G会社環境4\</property>
+      <property name="comment" class="String">robo17</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ROBO_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0I.資産データ変更・分割\</property>
+      <property name="comment" class="String">本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\0I.資産データ変更・分割\
+
+開発：
+\\mpc000075608\RPA\88.テスト\04.固定資産\0I.資産データ変更・分割\
+\\qmusgt00225\RPA\88.テスト\04.固定資産\0I.資産データ変更・分割\</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\99.実行条件入力ファイル\</property>
+      <property name="comment" class="String">本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\99.実行条件入力ファイル\
+
+開発：
+\\mpc000075608\RPA\88.テスト\04.固定資産\99.実行条件入力ファイル\
+\\qmusgt00225\RPA\88.テスト\04.固定資産\99.実行条件入力ファイル\</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION00</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">00.MHI環境個別</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">10.MHPS環境個別</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION20</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">20.事業会社環境個別</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION30</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">30.G会社環境個別</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ACTION40</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">40.全環境</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">01.設定</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">設定情報ファイル_0I資産データ変更・分割ロボ.xlsx</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CMD_CALL_MACRO_WITH_PARAMS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">cscript //nologo "%VBS_FULLPATH%" "%FORM_FULLPATH%"  "%MACRO_NAME%" "%PARAM1%" "%PARAM2%" "%PARAM3%" "%PARAM4%" "%PARAM5%" "%PARAM6%" "%PARAM7%"</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FILEPASS7Z</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">C:\BizRobo\Tools\7z\x64\7za.exe</property>
+      <property name="comment" class="String">7zのファイルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHOKUSEI_MAILADRRESS_FOR_KAIHATSU</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">yukihiro_watanabe@mhi.co.jp</property>
+      <property name="comment" class="String">開発用
+
+※本番切替の際は、SHOKUSEI_MAILADRRESS_FOR_KAIHATSUに名前を変更する※
+
+本番(20221006修正前)
+yukihiro_watanabe@mhi.co.jp</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SERVER_FOR_KAIHATSU</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Q6T</property>
+      <property name="comment" class="String">開発用
+
+※本番切替の際は、SAP_SERVER_FOR_KAIHATSUに名前を変更する※</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHOKUSEI_MAILADRRESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">GUK00000RPA-MAINTENANCE@mhi.co.jp</property>
+      <property name="comment" class="String">本番用
+
+※本番切替の際は、SHOKUSEI_MAILADRESS_FOR_HONBANから名前をSHOKUSEI_MAILADRRESSに変更する※
+
+本番(20221006修正前)
+GUK00000RPA-MAINTENANCE@mhi.co.jp
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SERVER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Q6P</property>
+      <property name="comment" class="String">本番用
+
+※本番切替の際は、SAP_SERVER_FOR_HONBANから名前をSAP_SERVERに変更する※
+
+本番(20221006修正前)
+Q6P</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CMD_TASKKILL2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">taskkill.exe /IM msedge.exe  /F</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_LIST_DL_MHI</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">SAP</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI145</property>
+      <property name="comment" class="String">資産検索リストをダウンロードする際に使用するMHI用トランザクションコード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_LIST_DL_OTHER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI145</property>
+      <property name="comment" class="String">資産検索リストをダウンロードする際に使用するG会社用トランザクションコード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_FULL_MHI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI153</property>
+      <property name="comment" class="String">変更処理に使用するMHI用トランザクションコード
+（完全移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_FULL_OTHER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI161</property>
+      <property name="comment" class="String">変更処理に使用するMHI用トランザクションコード
+（完全移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_PARTIAL</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ABUMN</property>
+      <property name="comment" class="String">分割処理に使用するトランザクションコード
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_REPORT_MHI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI081</property>
+      <property name="comment" class="String">レポート出力処理のMHI用トランザクションコード
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_REPORT_OTHER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI081</property>
+      <property name="comment" class="String">レポート出力処理のG会社用トランザクションコード
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VARIANT_NAME_REPORT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA_移管</property>
+      <property name="comment" class="String">レポート出力処理に使用するバリアント名
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NO_IKAN_DAY_1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">特</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NO_IKAN_DAY_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">夏</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NO_IKAN_DAY_3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">振</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NO_IKAN_DAY_4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">休日</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VARIANT_NAME_MASTER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA 移管</property>
+      <property name="comment" class="String">資産マスタ検索リスト出力の際に使用するバリアント名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VARIANT_NAME_FULL_REPORT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA 移管後</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ検索</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産取引入力：会社コード内の振替/資産登録：マスタデータ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産登録：マスタデータ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産取引入力：会社コード内の振替</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_5</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産取引残高一覧</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_6</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産登録：</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_NAME_7</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ変更</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TAB_NAME_1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">償却領域</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TAB_NAME_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">追加詳細</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TAB_NAME_3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">取引データ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TAB_NAME_4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">割当</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TAB_NAME_5</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">部分振替</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WEB_SCREEN_NAME_1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">■移管伺一覧</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WEB_SCREEN_NAME_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">固定資産移管完了報告書</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">All_run</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">CheckSheetFile</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">CHECK_RUN</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">SECOND_RUN</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_OUTPUT_PRINT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Microsoft XPS Doucument Writer</property>
+      <property name="comment" class="String">Microsoft XPS Doucument Writer</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CELL_NUMBER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">D4:E6</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHEET_NAME_FOR_ERR_MSG</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">09.処理件数及び処理金額確認</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHORI_KUBUN_KANZEN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">完全移管処理</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CHECK_SHEET_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">08.チェックシート</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHORI_KUBUN_BUBUN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">部分移管処理</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DOCUMENT_TYPE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">12</property>
+      <property name="comment" class="String">分割処理に使用する伝票タイプ
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FURIKAE_VARIANT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Z</property>
+      <property name="comment" class="String">分割処理に使用する振替バリアント
+（部分移管）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FRIKAE_VARIANT2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">4</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAX_PRINT_COUNT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">5</property>
+      <property name="comment" class="String">MAXカウント</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAX_WAIT_COUNT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">6</property>
+      <property name="comment" class="String">MAXカウント</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_ADDRESS_FOR_KAIHATSU</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">tomoki.endo.yt@mhi.com</property>
+      <property name="comment" class="String">開発用の保守メールアドレス
+
+20221006修正前
+sakura_minote@mhi.co.jp</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381502A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381503A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381504A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_5</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381505A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_6</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381506A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_7</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381507A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_8</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381508A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHISAN_CLASS_TYOMAE_9</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">1381509A</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">BUBUN_ERR_SHISAN_NUM</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">エラー発生資産番号       ：&lt;%errShisanNum%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_SUCCESS</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">メールフォーマット</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【%会社名%】資産データ変更・分割ロボ 正常終了 (%申請番号%)</property>
+      <property name="comment" class="String">正常終了メール件名
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_ERROR_WITH_NUMBER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【%会社名%】資産データ変更・分割ロボ エラー終了 (%申請番号%)</property>
+      <property name="comment" class="String">警告終了メール件名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_SUCCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボットの処理が正常に終了しました。
+処理結果をご確認ください。
+
+■処理結果
+区分　　　　件数　　　移管見合取得価額
+完全移管　　　%KANZENKENSU%　　　　　　%KANZENKINGAKU%
+部分移管　　　%BUBUNKENSU%　　　　　　%BUBUNKINGAKU%
+合計　　　　　%SUMKENSU%　　　　　　%SUMKINGAKU%
+
+%SHORI_KEKKA%
+
+%KEIKOKU_NAIYO%</property>
+      <property name="comment" class="String">正常メール本文</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_ERROR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボットがエラー終了しました。
+以下のエラーメッセージをご確認ください。
+
+■エラー内容							
+%ERROR_MSG%■処理結果
+%SHORI_KEKKA%
+
+%KEIKOKU_NAIYO%</property>
+      <property name="comment" class="String">メール本文(エラー)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">COMPLETE_SHORIKEKKA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ変更件数（%BUBUN_OR_KANZEN%）
+取込件数　：%TORIKOMI%
+登録件数　：%TOROKU%
+エラー件数：%ERROR%</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">COMPLETE_FULL_TRANSFER_ERROR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">■処理結果
+資産マスタ変更件数（完全移管）
+取込件数　：%TORIKOMI%
+登録件数　：%TOROKU%
+エラー件数：%ERROR%</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_SAP_ERROR_MSG</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、下記メニューにおいてエラーが発生しました。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+画面名                   ：&lt;%screenName%&gt;
+エラーメッセージ         ：&lt;%errorMsg%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_SAP_ERROR_TAB</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、下記メニューにおいてエラーが発生しました。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+画面名                   ：&lt;%screenName%&gt;
+タブ名                   ：&lt;%tabName%&gt;
+エラー発生資産番号       ：&lt;%errShisanNum%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_SAP_MSG_AND_TAB</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、下記メニューにおいてエラーが発生しました。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+画面名                   ：&lt;%screenName%&gt;
+タブ名                   ：&lt;%tabName%&gt;
+エラーメッセージ         ：&lt;%errorMsg%&gt;
+エラー発生資産番号       ：&lt;%errShisanNum%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_SAP_ERROR_SHORI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、下記メニューにおいてエラーが発生しました。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+処理区分                 ：&lt;%shoriName%&gt;
+画面名                   ：&lt;%screenName%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_SAP_ERROR_SHORI_AND_MSG</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、下記メニューにおいてエラーが発生しました。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+処理区分                 ：&lt;%shoriName%&gt;
+画面名                   ：&lt;%screenName%&gt;
+エラーメッセージ         ：&lt;%errorMsg%&gt;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_NO_KANZEN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">対象の申請番号の資産に変更を行うデータがございません。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_HENKO_ERROR_KANZEN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">完全移管の変更処理にて移管データにエラーがありました。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_HENKO_ERROR_BUBUN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">部分移管の変更処理にて移管データにエラーがありました。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_NO_SHORI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">ロボット処理対象の申請番号が存在しないか、ロボット実行日が移管対象外実働日に該当しています。
+移管処理を行わずにロボットを終了します。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_POSTING_AND_SHISANHYOKABI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">表記申請番号について、転記日付より移管完了日が未来の日付となっています。
+移管完了日が正しいかどうか確認してください。
+移管完了日が正しい場合、後日の実行で処理されますので、修正は不要となります。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_FUTURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">表記申請番号について、移管完了日が未来の日付となっていないか確認してください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MAIL_SEND_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">メールの送信処理に失敗しました。
+
+下記情報を確認のうえ、メールサーバ、ネットワークの状態を確認してください。
+
+メールサーバ：&lt;%MAIL_SERVER%&gt;
+サーバポート：&lt;%SERVER_PORT%&gt;
+送信元アドレス：&lt;%MAIL_SEND_FROM%&gt;
+送信先アドレス（To）：&lt;%MAIL_SEND_TO%&gt;
+送信先アドレス（Cc）：&lt;%MAIL_SEND_CC%&gt;
+メール件名：&lt;%MAIL_SUBJECT%&gt;
+メール本文：
+%MAIL_BODY%</property>
+      <property name="comment" class="String">メール送信に失敗した際にログに出力する内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_AMOUNT_HUITTI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">分割処理（部分移管）にて、移管見合取得価額と現在取得価額（圧縮前）及び現在取得価額（圧縮後）が一致しません。</property>
+      <property name="comment" class="String">・現在取得価額（圧縮前）と移管見合取得価額
+・現在取得価額（圧縮後）と移管見合取得価額
+
+上記二つとも一致しない場合のエラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_ZERO_IKANMIAIKAGAKU</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">対象の申請番号の資産の移管見合取得価額が空欄となっていますので、ご確認ください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_NO_HOJONUM</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">移管伺書の資産番号（補助番号）に不備がありますので、ご確認ください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_NO_SHISANMEISHO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">移管伺書の資産番号（資産名称）に不備がありますので、ご確認ください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_NO_IKANHOHO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">移管伺書の移管方法が空欄となっていますので、ご確認ください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_BEFORE_SAP_HENKO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">
+
+※SAP変更処理前エラーです。
+　業務エラーの場合は、移管データを修正し、ロボを再実行してください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_MAKE_DIRECTORY</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">フォルダの作成に失敗しました。
+下記フォルダと同名のフォルダが存在しないか確認してください。
+
+■対象フォルダ
+フォルダパス：&lt;%folderPath%&gt;
+
+同名のフォルダが存在しない場合、処理実行時のエラーの可能性があります。
+システム管理者に連絡してください。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WARNING_MSG_TAX</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">税務上資産の部分移管については、数量の変更が実施できない為、
+必要に応じ資産マスタの数量を修正願います。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_ONLY_MINUS_SHISAN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">部分移管処理の対象資産に移管見合取得価額がマイナスとなっている資産のみ存在しているため、
+部分移管処理（マスタ作成・変更処理・レポート出力）を実施していません。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WARNING_MSG_FAIL_REPORT_KANZEN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">変更処理（完全移管処理）のDocument Writerによるファイル出力処理に失敗しました。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WARNING_MSG_FAIL_REPORT_BUBUN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">分割処理（部分移管処理）のDocument Writerによるファイル出力処理に失敗しました。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WARNING_MSG_MIDASHI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">■警告内容</property>
+      <property name="comment" class="String">警告見出し</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERROR_MSG_CHECK_NG</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">%CHECK_SHEET_NAME%において、資産マスタ整合性チェックで
+「NG」案件がありましたので、内容をご確認下さい。</property>
+    </object>
+  </property>
+  <property name="comment" class="String">定数。固定値。
+ファイルパス、URL、ユーザID等、将来的に変更する可能性のある固定値を登録。
+
+・CONSTは必ず1ロボあたり1つにする。(複数に別れるとメンテ漏れするリスクとなる)
+・CONSTの各Variableには、必ずコメントを入力する
+・複数のグループに別れるときはセパレータを設定する。</property>
+</object>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">returnValue</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">マクロ実行結果戻り値</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">hateiNo</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+      <property name="comment" class="String">計上先経費判定</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sashizuWBS</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">一覧表から取得した
+計上先指図・WBS（頭アルファベットのみ取得）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sashizuWBS_2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">ダウンロードした
+計上先指図・WBS（頭アルファベットのみ取得）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">cntBaikyaku</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">売却件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">cntErrorNo</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">紐づけられなかった申請番号のフラグ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">fileName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType" id="1"/>
+      <property name="comment" class="String">ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">fileData</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">ファイルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">fileNameBinary</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BinaryAttributeType" id="2"/>
+      <property name="comment" class="String">バイナリ名前</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">fileDataBinary</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">ファイルデータバイナリー</property>
+    </object>
+  </property>
+</object>

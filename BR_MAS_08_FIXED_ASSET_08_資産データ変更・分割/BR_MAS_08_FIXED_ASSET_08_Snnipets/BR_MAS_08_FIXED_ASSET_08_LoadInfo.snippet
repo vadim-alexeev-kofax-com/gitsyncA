@@ -1,0 +1,2273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG"/>
+      <type name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_local"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_local"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="COMMON_MAILMSG" type-name="BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG"/>
+      <typed-variable name="COMMON" type-name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <typed-variable name="CNST" type-name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <typed-variable name="CNST2" type-name="BR_MAS_08_FIXED_ASSET_10_CONST"/>
+      <typed-variable name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <typed-variable name="gbl" type-name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <typed-variable name="gbl2" type-name="BR_MAS_08_FIXED_ASSET_10_global"/>
+      <typed-variable name="lcl" type-name="BR_MAS_08_FIXED_ASSET_08_local"/>
+      <typed-variable name="lcl2" type-name="BR_MAS_08_FIXED_ASSET_10_local"/>
+      <typed-variable name="bubun" type-name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="gbl"/>
+      <variable name="gbl2"/>
+    </global-variables>
+    <parameters>
+      <parameter name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+    </parameters>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">COMMON_MAILMSG</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">COMMON</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_COMMON_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST2</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">inpt</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_input</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="syudoFlg" class="AttributeAssignment">
+            <property name="attributeValue" class="String">true</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.BooleanAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl2</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_local</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="sysTimeTypeDate" class="AttributeAssignment">
+            <property name="attributeValue" class="String">2018-11-01 15:44:00.193</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.DateAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl2</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_local</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">bubun</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_bubun</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">ノーマル版：前処理
+QA版：前処理
+【DAなし】</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">実行条件入力ファイル</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.sapMhiUser</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">SAPユーザ\(MHI他\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="2">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">SAPユーザ（MHI）</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.sapMhiUser</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">SAPユーザ\(MHI他\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="4">
+        <property name="name" class="String">SAPパスワード（MHI）</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.sapMhiPass</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">SAPパスワード\(MHI他\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">SAPユーザ（G会社）</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.sapGroupUser</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">SAPユーザ\(グループ会社\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">SAPパスワード（G会社）</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.sapGroupPass</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">SAPパスワード\(グループ会社\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">完了通知メールアドレス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.emailTo</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">完了通知メールアドレス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="8">
+        <property name="name" class="String">完了通知メールアドレスCC</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.emailCc</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">完了通知メールアドレスCC</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="9">
+        <property name="name" class="String">Web固定資産システムURL</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.webSystemUrl</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">Web固定資産システムURL</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="10">
+        <property name="name" class="String">Web固定資産システムID</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.webSystemId</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">Web固定資産システムID</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="11">
+        <property name="name" class="String">資産マスタ検索リストフォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.masterSearchListFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">資産マスタ検索リスト格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="12">
+        <property name="name" class="String">資産マスタ検索リストファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.masterSearchListFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">資産マスタ検索リストファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="13">
+        <property name="name" class="String">完全移管マスタ変更用フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted04SheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後完全移管マスタ変更用ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="14">
+        <property name="name" class="String">完全移管マスタ変更用ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted04SheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後完全移管マスタ変更用ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="15">
+        <property name="name" class="String">部分移管マスタ登録用フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted05SheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後部分移管マスタ登録用ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="16">
+        <property name="name" class="String">部分移管マスタ登録用ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.poeted05SheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後部分移管マスタ登録用ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="17">
+        <property name="name" class="String">部分移管マスタ変更用フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted06SheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後部分移管マスタ変更用ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="18">
+        <property name="name" class="String">部分移管マスタ変更用ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted06SheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後部分移管マスタ変更用ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="19">
+        <property name="name" class="String">処理件数及び処理金額確認用フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted07SheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">処理件数及び処理金額確認用ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="20">
+        <property name="name" class="String">処理件数及び処理金額確認用ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.posted07SheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">処理件数及び処理金額確認用ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="21">
+        <property name="name" class="String">資産取引残高一覧フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.shisanTorihikiZandakaFileFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">資産取引残高一覧表ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="22">
+        <property name="name" class="String">資産取引残高一覧ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.shisanTorihikiZandakaFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">資産取引残高一覧表ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="23">
+        <property name="name" class="String">まとめZIPフォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.matomeZipFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">まとめZIPフォルダ名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="24">
+        <property name="name" class="String">まとめZIPフォルダ名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.matomeZipFolderName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">まとめZIPファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="25">
+        <property name="name" class="String">新資産番号入力用フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.newShisanNumFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">新資産番号入力用ファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="26">
+        <property name="name" class="String">新資産番号入力用ファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.newShisanNumFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">新資産番号入力用ファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="27">
+        <property name="name" class="String">チェックシート用資産マスタ検索リスト格納フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.masterSearchListForCheckFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">チェックシート用資産マスタ検索リスト格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="28">
+        <property name="name" class="String">チェックシート用資産マスタ検索リストファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.masterSearchListForCheckFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">チェックシート用資産マスタ検索リストファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="29">
+        <property name="name" class="String">転記前チェックシートファイル格納フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.beforePostCheckSheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記前チェックシートファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="30">
+        <property name="name" class="String">転記前チェックシートファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.beforePostCheckSheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記前チェックシートファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="31">
+        <property name="name" class="String">転記後チェックシートファイル格納フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.afterPostCheckSheetFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後チェックシートファイル格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="32">
+        <property name="name" class="String">転記後チェックシートファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.afterPostCheckSheetFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">転記後チェックシートファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="33">
+        <property name="name" class="String">フォームフォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.formFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">固定資産移管処理転記後フォーム格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="34">
+        <property name="name" class="String">フォームファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.formFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">固定資産移管処理転記後フォームファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="35">
+        <property name="name" class="String">エラーファイル(完全)フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errorFileFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">エラーファイル\(完全移管\)格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="36">
+        <property name="name" class="String">エラーファイル名(完全)</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errorFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">エラーファイル名\(完全移管\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="37">
+        <property name="name" class="String">エラーファイル(部分)フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errorFileBubunFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">エラーファイル\(部分移管\)格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="38">
+        <property name="name" class="String">エラーファイル名(部分)</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errorFileBubunName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">エラーファイル名\(部分移管\)</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="39">
+        <property name="name" class="String">完全移管処理結果レポート格納フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.resultReportFileFolderPathFull</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">完全移管処理結果レポート格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="40">
+        <property name="name" class="String">完全移管処理結果レポートファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.resultReportFileNameFull</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">完全移管処理結果レポートファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="41">
+        <property name="name" class="String">部分移管処理結果レポート格納フォルダパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.resultReportFileFolderPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">部分移管処理結果レポート格納フォルダパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="42">
+        <property name="name" class="String">部分移管処理結果レポートファイル名</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.resultReportFileName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">部分移管処理結果レポートファイル名</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="43">
+        <property name="name" class="String">実働日カレンダーフォーム</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.calenderFormPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">実働日カレンダーフォームフルパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="44">
+        <property name="name" class="String">実働日カレンダーフルパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.calenderExcelOutputPath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">実働日カレンダー格納フルパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="45">
+        <property name="name" class="String">VBSファイルフルパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.vbsCopyTo</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">VBSファイルフルパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="46">
+        <property name="name" class="String">VBSテンプレートファイルフルパス</property>
+        <property name="stepAction" class="ExtractCell">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.vbsCopyFrom</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="ExcelElementFinder">
+            <property name="detail" class="NamedRangeCellFinderDetail">
+              <property name="rangeName" class="ElementName">
+                <property name="name" class="String">Setteiti</property>
+              </property>
+              <property name="usage" class="CellFromRange">
+                <property name="columnId" class="ByHeaderExcelColumnId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">Header</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">設定値</property>
+                  </property>
+                </property>
+                <property name="rowId" class="ByHeaderExcelRowId">
+                  <property name="headerRangeName" class="ElementName">
+                    <property name="name" class="String">KomokuMei</property>
+                  </property>
+                  <property name="headerPattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">VBSテンプレートファイルフルパス</property>
+                  </property>
+                </property>
+              </property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="47"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="12"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="14"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="14"/>
+        <to idref="15"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="15"/>
+        <to idref="16"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="16"/>
+        <to idref="17"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="17"/>
+        <to idref="18"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="18"/>
+        <to idref="19"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="19"/>
+        <to idref="20"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="20"/>
+        <to idref="21"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="21"/>
+        <to idref="22"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="22"/>
+        <to idref="23"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="23"/>
+        <to idref="24"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="24"/>
+        <to idref="25"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="25"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="26"/>
+        <to idref="27"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="28"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="28"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="29"/>
+        <to idref="30"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="31"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="31"/>
+        <to idref="32"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="32"/>
+        <to idref="33"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="33"/>
+        <to idref="34"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="34"/>
+        <to idref="35"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="35"/>
+        <to idref="36"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="36"/>
+        <to idref="37"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="37"/>
+        <to idref="38"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="38"/>
+        <to idref="39"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="39"/>
+        <to idref="40"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="40"/>
+        <to idref="41"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="41"/>
+        <to idref="42"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="42"/>
+        <to idref="43"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="43"/>
+        <to idref="44"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="44"/>
+        <to idref="45"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="45"/>
+        <to idref="46"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="46"/>
+        <to idref="47"/>
+      </object>
+    </edges>
+  </body>
+</object>

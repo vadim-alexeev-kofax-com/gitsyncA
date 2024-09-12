@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TRN_KOK5</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">KOK5</property>
+      <property name="comment" class="String">内部指図データ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">COMMAND_MERGE_SHEET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">cscript //nologo  "%SCRIPT_FULL_PATH%"  "%XLSM_FULL_PATH%" "%MACRO_NAME%" "%WORK_PATH%"</property>
+      <property name="comment" class="String">VBS実行コマンド</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">COMMAND_SINSEINO_GET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">cscript //nologo  "%SCRIPT_FULL_PATH%"  "%XLSM_FULL_PATH%" "%MACRO_NAME%" "%WORK_PATH%"</property>
+      <property name="comment" class="String">VBS実行コマンド(申請番号取得用)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VBS_FILE_NAME2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">getMacro.vbs</property>
+      <property name="comment" class="String">vbsファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VBS_FILE_NAME3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">createMacro.vbs</property>
+      <property name="comment" class="String">vbsファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">execMacro.xlsm</property>
+      <property name="comment" class="String">実行マクロ記載ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_FILE_NAME2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">createMacro.xlsm</property>
+      <property name="comment" class="String">実行マクロ記載ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME1</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">把握レポート申請番号取得</property>
+      <property name="comment" class="String">実行マクロ名：把握レポート申請番号取得</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">把握レポート申請番号取得2</property>
+      <property name="comment" class="String">実行マクロ名：把握レポート申請番号取得</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Webデータ貼り付け</property>
+      <property name="comment" class="String">実行マクロ名：Webデータ貼り付け</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME4</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">データ入力</property>
+      <property name="comment" class="String">実行マクロ名：データ入力</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME5</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">一時先から貼り付け</property>
+      <property name="comment" class="String">実行マクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME6</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">売却絞り込み</property>
+      <property name="comment" class="String">実行マクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME7</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">対価振替欄入力</property>
+      <property name="comment" class="String">実行マクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME8</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">各現勘定コード入力</property>
+      <property name="comment" class="String">実行マクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME9</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">負担先入力</property>
+      <property name="comment" class="String">実行マクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FILE_NAME_WEB_DATA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Webデータ</property>
+      <property name="comment" class="String">Webデータ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FILE_NAME_TEMPLATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">一覧表(入力用)_一時保存用</property>
+      <property name="comment" class="String">一時保存用ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FILE_NAME_NAIBU_SASHIZU</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">内部指図一覧</property>
+      <property name="comment" class="String">内部指図一覧ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_TEMPFILE_COPY</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">処分関連損益集計表(振替用)テンプレートファイルのコピーに失敗しました。ファイルが編集中でないか確認してください。</property>
+      <property name="comment" class="String">ファイル移動エラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_WEB_LOGIN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">Web固定資産システムの接続に失敗しました。Web環境、ID・パスワードを確認してください。</property>
+      <property name="comment" class="String">DAエラー：Webログイン</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_WEB_LOGOUT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">Web固定資産システムのログアウトに失敗しました。</property>
+      <property name="comment" class="String">DAエラー：Webログアウト</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_WEB_DL</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">Web固定資産システムからのWebデータダウンロードに失敗しました。</property>
+      <property name="comment" class="String">DAエラー：Webダウンロード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_FURIKAE_FILE_LOAD</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">「振替先現勘定入力ルール.xlsx」の読み込みに失敗しました。
+下記フォルダパスの中に振替先現勘定入力ルールのファイルが存在するか確認してください。
+
+&lt;%filePath%&gt;</property>
+      <property name="comment" class="String">ファイル存在チェック</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_ITIZI_FILE_LOAD</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">一覧表(入力用)：一時保存ファイルの読み込みに失敗しました。
+マクロで設定している保存ファイル名を確認してください。</property>
+      <property name="comment" class="String">ファイル名エラー
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_DB_ACCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">データベースへの接続に失敗しました。
+システム保守部門へ連絡し、MCにあるデータベースを確認してください。			</property>
+      <property name="comment" class="String">DBエラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_SAP_NAIBU_SYOKAI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPでの内部指図の照会・明細ダウンロードに失敗しました。</property>
+      <property name="comment" class="String">DAエラー：KOK5</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_FILE_COPY</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">処分関連損益集計表のフォルダ移動に失敗しました。
+下記フォルダに該当のファイルが存在するか確認してください。
+
+&lt;%FilePath%&gt;</property>
+      <property name="comment" class="String">ファイル移動エラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_SEND_MAIL</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">メールの送信に失敗しました。
+下記フォルダに処分関連損益集計表のファイルが存在するか確認してください。
+&lt;%FilePath%&gt;</property>
+      <property name="comment" class="String">メール送信エラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_NAIBU_SYOKAI_GET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">内部指図の照会で取得した計上先コードの読み取りに失敗しました。
+下記フォルダに該当のファイルが存在するか確認し、ロボットを再実行してください。
+
+&lt;%FilePath%&gt;</property>
+      <property name="comment" class="String">内部照会ファイル読込エラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_TAIKA_NO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">対価振替の金額入力する際に申請番号が上手く紐付けられない案件がありましたので、ご確認ください。</property>
+      <property name="comment" class="String">対価振替の新申請番号</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_ROW_WEB</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">・Webデータが3000行を超過しています。</property>
+      <property name="comment" class="String">行超過メッセージ(Web固定資産管理システム)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">HANTEI_NO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">2724</property>
+      <property name="comment" class="String">計上先経費判定</property>
+    </object>
+  </property>
+</object>

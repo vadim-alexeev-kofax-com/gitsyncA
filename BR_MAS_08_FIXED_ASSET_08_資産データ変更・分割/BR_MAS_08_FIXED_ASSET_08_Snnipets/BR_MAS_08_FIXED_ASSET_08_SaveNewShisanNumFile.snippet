@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG"/>
+      <type name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_local"/>
+      <type name="BR_MAS_08_FIXED_ASSET_10_local"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="COMMON_MAILMSG" type-name="BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG"/>
+      <typed-variable name="COMMON" type-name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <typed-variable name="CNST" type-name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <typed-variable name="CNST2" type-name="BR_MAS_08_FIXED_ASSET_10_CONST"/>
+      <typed-variable name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <typed-variable name="gbl" type-name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <typed-variable name="gbl2" type-name="BR_MAS_08_FIXED_ASSET_10_global"/>
+      <typed-variable name="lcl" type-name="BR_MAS_08_FIXED_ASSET_08_local"/>
+      <typed-variable name="lcl2" type-name="BR_MAS_08_FIXED_ASSET_10_local"/>
+      <typed-variable name="bubun" type-name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="gbl"/>
+      <variable name="gbl2"/>
+    </global-variables>
+    <parameters>
+      <parameter name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+    </parameters>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">COMMON_MAILMSG</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_COMMON_MAILMSG</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">COMMON</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_COMMON_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST2</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">inpt</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_input</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="syudoFlg" class="AttributeAssignment">
+            <property name="attributeValue" class="String">true</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.BooleanAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl2</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_local</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="sysTimeTypeDate" class="AttributeAssignment">
+            <property name="attributeValue" class="String">2018-11-01 15:44:00.193</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.DateAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl2</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_10_local</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">bubun</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_bubun</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">QA版：部分移管マスタ登録後
+ノーマル版：部分移管マスタ登録後
+【DAなし】</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">Write File</property>
+        <property name="stepAction" class="WriteFile" serializationversion="0">
+          <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.newShisanNumEnterFileFullPath</property>
+            </property>
+          </property>
+          <property name="fileContentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">gbl.newShisanNumExcel</property>
+            </property>
+          </property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">処理エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="2">true</property>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">Wait（5秒）</property>
+        <property name="stepAction" class="Wait2">
+          <property name="seconds" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">5</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="4"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+    </edges>
+  </body>
+</object>

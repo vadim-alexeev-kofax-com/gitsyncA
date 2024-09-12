@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+      <version>11.1.0.6</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FILE_PATH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\</property>
+      <property name="comment" class="String">設定情報ファイルパス
+本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\0K.銘板発行\
+テスト：
+\\qmusgt00225\RPA\08.UAT\MAS\固定資産\0K.銘板発行\
+新本番：
+\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_09</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">41.全環境1\01.設定\</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">42.全環境2\01.設定\</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CALENDER_TEMPLATE_FILE_PATH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\99.フォーム\ </property>
+      <property name="comment" class="String">本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\0K.銘板発行\99.フォーム\
+テスト：
+\\qmusgt00225\RPA\08.UAT\MAS\固定資産\0K.銘板発行\99.フォーム\
+新本番：
+\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\99.フォーム\
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SEIKABUTU_FOLDER_PATH9</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\41.全環境1\02.出力\01.成果物\</property>
+      <property name="comment" class="String">本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\0K.銘板発行\41.全環境1\02.出力\01.成果物
+テスト：
+\\qmusgt00225\RPA\08.UAT\MAS\固定資産\0K.銘板発行\41.全環境1\02.出力\01.成果物\
+新本番：
+\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\41.全環境1\02.出力\01.成果物
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SEIKABUTU_FOLDER_PATH10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\42.全環境2\02.出力\01.成果物\</property>
+      <property name="comment" class="String">本番：
+\\qss001b\public\@財務部門RPA\MAS\固定資産\0K.銘板発行\42.全環境2\02.出力\01.成果物
+テスト：
+\\qmusgt00225\RPA\08.UAT\MAS\固定資産\0K.銘板発行\42.全環境2\02.出力\01.成果物\
+新本番：
+\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0K.銘板発行\42.全環境2\02.出力\01.成果物
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_WEB_DATA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_tmp_web_data</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_MEIBAN</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_tmp_meiban_data</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_MEIBAN10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_tmp_meiban_data2</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_WEB_DATA10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_tmp_web_data2</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_SHINSEINO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_SHINSEINO</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_SHINSEINO10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">br_mas_08_fixed_asset_09_t_SHINSEINO_2</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">VARIANT_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA銘板発行</property>
+      <property name="comment" class="String">バリアントネーム</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">設定情報ファイル_0K銘板発行ロボ.xlsx</property>
+      <property name="comment" class="String">設定情報ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CONDITION_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイル_0K銘板発行ロボ.xlsx</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CONDITION_FILE_NAME_RUNNING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【ロボ処理中】</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CALENDER_TEMPLATE_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">実働日カレンダー.xlsx</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_MEIBAN_MHI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI143</property>
+      <property name="comment" class="String">MHI環境のトランザクションコード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TC_MEIBAN_GR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI158</property>
+      <property name="comment" class="String">グループ会社環境のトランザクションコード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_WITH_DA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">macroDA.vbs</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_WITH_PARAMS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">macroParams.vbs</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">IKANUKAGAI_DATA_FILE_NAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">移管伺検索結果リスト</property>
+      <property name="comment" class="String">体操ファイルが複数個設定する場合、カンマで区切りデフォルト設定すること。
+例）
+移管伺検索結果リスト,移管伺データ一覧</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_GET_SOHUSAKI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">select dbo.APD_USER_TODAY.USER_ID,dbo.APD_KAISYA_TODAY.KAISYA_NM,dbo.APD_USER_TODAY.KINMU_KAISYA_CD,dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD,dbo.APD_SOSHIKI_TODAY.LV1_NM,dbo.APD_SOSHIKI_TODAY.LV2_NM,dbo.APD_SOSHIKI_TODAY.LV3_NM,dbo.APD_SOSHIKI_TODAY.LV4_NM,dbo.APD_SOSHIKI_TODAY.LV5_NM,dbo.APD_SOSHIKI_TODAY.LV6_NM,dbo.APD_USER_TODAY.KINMU_KAISYA_CD + dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD as SYOZOKU_CD,dbo.APD_USER_TODAY.SEI,dbo.APD_USER_TODAY.MIDDLE,dbo.APD_USER_TODAY.MEI,dbo.APD_USER_TODAY.KINMU_KAISYA_CD + dbo.APD_USER_TODAY.KINMU_OFFICE_CODE as jinjiCode,dbo.APD_OFFICE.NAME as JINJI_SUB_NM
+FROM dbo.APD_USER_TODAY
+JOIN dbo.APD_SOSHIKI_TODAY
+ON (dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD = dbo.APD_SOSHIKI_TODAY.SYOZOKU_CD and dbo.APD_USER_TODAY.KINMU_KAISYA_CD = APD_SOSHIKI_TODAY.KAISYA_CD)
+JOIN dbo.APD_KAISYA_TODAY
+ON dbo.APD_USER_TODAY.KINMU_KAISYA_CD = dbo.APD_KAISYA_TODAY.KAISYA_CD
+JOIN dbo.APD_OFFICE
+ON (dbo.APD_USER_TODAY.KINMU_KAISYA_CD = dbo.APD_OFFICE.KAISYACD and dbo.APD_USER_TODAY.KINMU_OFFICE_CODE = dbo.APD_OFFICE.OFFICE_CODE)
+WHERE USER_ID='%USER_ID%'</property>
+      <property name="comment" class="String">【現行】
+select dbo.APD_USER_TODAY.USER_ID,dbo.APD_KAISYA_TODAY.KAISYA_NM,dbo.APD_USER_TODAY.KINMU_KAISYA_CD,dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD,dbo.APD_SOSHIKI_TODAY.LV1_NM,dbo.APD_SOSHIKI_TODAY.LV2_NM,dbo.APD_SOSHIKI_TODAY.LV3_NM,dbo.APD_SOSHIKI_TODAY.LV4_NM,dbo.APD_SOSHIKI_TODAY.LV5_NM,dbo.APD_SOSHIKI_TODAY.LV6_NM,dbo.APD_SOSHIKI_TODAY.SYOZOKU_CD,dbo.APD_SOSHIKI_TODAY.JIGYOSYO_CD,dbo.APD_USER_TODAY.SEI,dbo.APD_USER_TODAY.MIDDLE,dbo.APD_USER_TODAY.MEI,dbo.APD_USER_TODAY.KINMU_JINJI_RYOUIKI+dbo.APD_USER_TODAY.KINMU_JINJI_SUB as jinjiCode,dbo.APD_JINJI_SUB.JINJI_SUB_NM
+FROM dbo.APD_USER_TODAY
+JOIN dbo.APD_SOSHIKI_TODAY
+ON  dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD = dbo.APD_SOSHIKI_TODAY.SYOZOKU_CD
+JOIN dbo.APD_KAISYA_TODAY
+ON dbo.APD_USER_TODAY.KINMU_KAISYA_CD = dbo.APD_KAISYA_TODAY.KAISYA_CD
+JOIN dbo.APD_JINJI_SUB
+ON (dbo.APD_USER_TODAY.KINMU_JINJI_RYOUIKI = dbo.APD_JINJI_SUB.JINJI_RYOUIKI and dbo.APD_USER_TODAY.KINMU_JINJI_SUB = dbo.APD_JINJI_SUB.JINJI_SUB)
+WHERE USER_ID='%USER_ID%'
+【新Open-gim対応】
+select dbo.APD_USER_TODAY.USER_ID,dbo.APD_KAISYA_TODAY.KAISYA_NM,dbo.APD_USER_TODAY.KINMU_KAISYA_CD,dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD,dbo.APD_SOSHIKI_TODAY.LV1_NM,dbo.APD_SOSHIKI_TODAY.LV2_NM,dbo.APD_SOSHIKI_TODAY.LV3_NM,dbo.APD_SOSHIKI_TODAY.LV4_NM,dbo.APD_SOSHIKI_TODAY.LV5_NM,dbo.APD_SOSHIKI_TODAY.LV6_NM,dbo.APD_USER_TODAY.KINMU_KAISYA_CD + dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD as SYOZOKU_CD,dbo.APD_USER_TODAY.SEI,dbo.APD_USER_TODAY.MIDDLE,dbo.APD_USER_TODAY.MEI,dbo.APD_USER_TODAY.KINMU_KAISYA_CD + dbo.APD_USER_TODAY.KINMU_OFFICE_CODE as jinjiCode,dbo.APD_OFFICE.NAME as JINJI_SUB_NM
+FROM dbo.APD_USER_TODAY
+JOIN dbo.APD_SOSHIKI_TODAY
+ON (dbo.APD_USER_TODAY.KINMU_SYOZOKU_CD = dbo.APD_SOSHIKI_TODAY.SYOZOKU_CD and dbo.APD_USER_TODAY.KINMU_KAISYA_CD = APD_SOSHIKI_TODAY.KAISYA_CD)
+JOIN dbo.APD_KAISYA_TODAY
+ON dbo.APD_USER_TODAY.KINMU_KAISYA_CD = dbo.APD_KAISYA_TODAY.KAISYA_CD
+JOIN dbo.APD_OFFICE
+ON (dbo.APD_USER_TODAY.KINMU_KAISYA_CD = dbo.APD_OFFICE.KAISYACD and dbo.APD_USER_TODAY.KINMU_OFFICE_CODE = dbo.APD_OFFICE.OFFICE_CODE)
+WHERE USER_ID='%USER_ID%'</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_IMPORT_CSV</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">LOAD DATA INFILE '%importFilePath%'
+ IGNORE INTO TABLE %tableName% 
+FIELDS TERMINATED BY ','
+enclosed by '"'
+LINES TERMINATED BY'\r\n'
+
+
+
+IGNORE 1 LINES;</property>
+      <property name="comment" class="String">
+修正前ーーー
+LOAD DATA LOCAL INFILE '%importFilePath%'
+INTO TABLE %tableName% 
+FIELDS TERMINATED BY '\t'
+IGNORE 1 LINES;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_IMPORT_CSV2</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">LOAD DATA INFILE '%importFilePath%'
+ IGNORE INTO TABLE %tableName% 
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY'\r\n'
+IGNORE 6 LINES;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_TRUNCATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">TRUNCATE TABLE %tableName%;</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_SELECT_UKAGAI</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SELECT * FROM %tableName%
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_UPDATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">UPDATE %tableName%
+SET %colmunName% = '%content%'
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SQL_EXPORT_CSV</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SELECT * FROM %tableName%
+INTO OUTFILE '%outputFileName%'
+CHARACTER SET 'cp932'
+FIELDS TERMINATED BY '\t' 
+LINES
+ TERMINATED BY '\r\n';</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FILEPASS7Z</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">C:\BizRobo\Tools\7z\x64\7za.exe</property>
+      <property name="comment" class="String">7zのファイルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">COMMAND_COPY_MACRO</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">copy %WORK_PATH% %OUTPUTFILE_PATH%</property>
+      <property name="comment" class="String">VBS実行コマンド</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CMD_CALL_MACRO_WITH_DA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">cscript //nologo %MACRO_DA% "%MACRO_FOLDER%%MACRO_FILE%"  "%MACRO_NAME%" "%PARAM1%"</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CMD_CALL_MACRO_WITH_PARAMS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">cscript //nologo %MACRO_PARAMS% "%MACRO_FOLDER%%MACRO_FILE%"  "%MACRO_NAME%" "%PARAM1%"</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">LOGMSG_MAIL_ERROR</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">ログメッセージ</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">メールが送付出来ませんでした。
+以下のエラー内容を確認してください。
+
+送信先メールアドレス
+%MAIL_ADDRESS%
+
+処理のエラーメッセージ
+%ERROR_MESSAGE%
+</property>
+      <property name="comment" class="String">メール送付エラーの場合はログのみ出力して終了</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">BODY_SUCCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+会社名：%COMPANY_NAME%
+
+外貨送金処理が正常に完了しました。
+以下のフォルダを確認してください。
+
+＜%FILE_PATH%＞</property>
+      <property name="comment" class="String">実行結果通知(メール本文)正常終了</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">BODY_SUCCESS_FOR_PROCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボットについて、以下の処理が正常に終了しましたので、処理結果をご確認ください。
+　1.パラメータ
+　　
+　　会社略称　　　　　　　%COMPANY_NAME%
+　　送金日　　　　　　　　%TRANSFER_DATE%
+　　処理内容　　　　　　　%PROCESS_NAME%
+
+　2.処理結果
+
+　　ステータス
+　　----------------------------------------------------
+　　正常終了
+
+以上
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_SAP_ALL</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルに未入力項目があります。
+実行条件入力ファイルの入力値を確認し、再度実行してください。
+
+■実行条件入力ファイル
+フォルダパス：&lt;%folderPath%&gt;
+ファイル名  ：%fileName%
+%content%</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SHOKUSEI_MAILADRRESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">koteishisannrobosyorikekkajushinn@mhi.com</property>
+      <property name="comment" class="String">本番--
+koteishisannrobosyorikekkajushinn@mhi.com
+M_GUK00000RPA-MAINTENANCE@mhi.com
+テスト
+shuko1_uchiyama@mhi.co.jp, kumiko1_yamanaka@mhi.co.jp</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_CONDITION_FILE_INPUT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルに未入力項目があります。
+実行条件入力ファイルの入力値を確認し、再度実行してください。
+
+■実行条件入力ファイル
+フォルダパス：&lt;%folderPath%&gt;
+ファイル名  ：%fileName%
+%content%</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_ERROR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボットがエラー終了しました。
+以下のエラーメッセージをご確認ください。
+
+■エラー内容							
+%ERROR_MSG%
+
+■エラー発生個所
+※デバック用(UAT終了後は表示されません。)
+対象会社：%companyName%
+処理内容：%processName%</property>
+      <property name="comment" class="String">メール本文(エラー)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_SUCCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボットの処理が正常に終了しました。
+処理結果をご確認ください。
+
+フォルダパス：%folderPath%
+ファイル名：%fileName%
+
+%ADDITIONAL_MSG%</property>
+      <property name="comment" class="String">正常メール本文</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_INCLUDE_ERROR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+表記ロボット処理にエラーがありました。
+下記エラー内容を確認してください。
+
+■エラー内容
+%ADDITIONAL_MSG%</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_SUCCESS</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">メールフォーマット</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【正常終了】%ROBO_NAME%_%PARAM1%</property>
+      <property name="comment" class="String">正常終了メール件名
+</property>
+    </object>
+  </property>
+</object>

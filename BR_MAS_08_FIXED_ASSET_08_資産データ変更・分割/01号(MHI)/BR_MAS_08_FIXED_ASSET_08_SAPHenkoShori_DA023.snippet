@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+      <version>11.1.0.6</version>
+    </saved-by-versions>
+    <file-type>snippet</file-type>
+    <referenced-types>
+      <type name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+      <type name="BR_MAS_08_FIXED_ASSET_08_local"/>
+    </referenced-types>
+    <triggers/>
+    <sub-robots>
+      <sub-robot name="DA_変更処理実行_DA023"/>
+    </sub-robots>
+    <device-mappings>
+      <mapping name="DA023"/>
+    </device-mappings>
+    <comment/>
+    <tags/>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="COMMON" type-name="BR_MAS_08_FIXED_ASSET_COMMON_CONST"/>
+      <typed-variable name="CNST" type-name="BR_MAS_08_FIXED_ASSET_08_CONST"/>
+      <typed-variable name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+      <typed-variable name="gbl" type-name="BR_MAS_08_FIXED_ASSET_08_global"/>
+      <typed-variable name="bubun" type-name="BR_MAS_08_FIXED_ASSET_08_bubun"/>
+      <typed-variable name="lcl" type-name="BR_MAS_08_FIXED_ASSET_08_local"/>
+    </typed-variables>
+    <parameters>
+      <parameter name="inpt" type-name="BR_MAS_08_FIXED_ASSET_08_input"/>
+    </parameters>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">COMMON</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_COMMON_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">inpt</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_input</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="syudoFlg" class="AttributeAssignment">
+            <property name="attributeValue" class="String">true</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.BooleanAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">bubun</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_bubun</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_08_local</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="sysTimeTypeDate" class="AttributeAssignment">
+            <property name="attributeValue" class="String">2018-11-01 15:44:00.193</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.DateAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">QA版：完全移管変更処理、部分移管変更処理
+ノーマル版：完全移管変更処理、部分移管変更処理
+【DAあり】</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">エラーメッセージ</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">CNST.ERROR_MSG_SAP_ERROR_SHORI</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",lcl.sapServer)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPLogin_BR_MAS_08_FIXED_ASSET.Client)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",lcl.transactionCode)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%screenName%",CNST.SAP_SCREEN_NAME_7)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%shoriName%",lcl.shoriKubun)</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">gbl.errMsgWk</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="2">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">トランザクションコード取得</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapServer==CNST.SAP_SERVER?CNST.TC_FULL_OTHER:CNST.TC_FULL_MHI</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">lcl.transactionCode</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="4">
+        <property name="name" class="String">DA_変更処理実行</property>
+        <property name="stepAction" class="CallRobot2Step">
+          <property name="robot2Name" class="String">DA_変更処理実行_DA023</property>
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">lcl.transactionCode</property>
+                </property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">lcl.henkoFullPath</property>
+                </property>
+              </property>
+            </object>
+          </property>
+          <property name="outputVariables" class="kapow.robot.plugin.common.stepaction.rl2.OutputVariableBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">lcl.inputErrFlg</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">lcl.registerKensu</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">lcl.errorKensu</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">lcl.sapErrMsg</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">lcl.torikomiKensu</property>
+              </property>
+            </object>
+          </property>
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">DA023</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">処理エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">画面遷移エラーチェック</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.inputErrFlg=="NoMsgErr"</property>
+          </property>
+          <property name="mode" class="Integer">1</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">処理エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">エラーメッセージ</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">CNST.ERROR_MSG_SAP_ERROR_SHORI_AND_MSG</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",lcl.sapServer)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPLogin_BR_MAS_08_FIXED_ASSET.Client)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",lcl.transactionCode)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%screenName%",CNST.SAP_SCREEN_NAME_7)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%errorMsg%",lcl.sapErrMsg)</property>
+                </element>
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">replaceText(INPUT,"%shoriName%",lcl.shoriKubun)</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">gbl.errMsgWk</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">エラーチェック</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.inputErrFlg=="MsgErr"</property>
+          </property>
+          <property name="mode" class="Integer">1</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">処理エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="8"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+    </edges>
+  </body>
+</object>

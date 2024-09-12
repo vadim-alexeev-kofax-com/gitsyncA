@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+      <version>11.1.0.6</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ROBOT_ROOT_PATH</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">設定情報</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\BVKQSS001B\FinDeptRPA$\MAS\固定資産\0G.税務上資産組入リスト作成\</property>
+      <property name="comment" class="String">ロボットが利用するフォルダのルートフォルダパス
+【変更】
+本番：\\qss001b\public\@財務部門RPA\MAS\固定資産\0G.税務上資産組入リスト作成\
+
+\\Mpc000075600\RPA\08.UAT\MAS\固定資産\0G.税務上資産組入リスト作成\
+\\qmusgt00225\RPA\44.開発・テスト\MAS\固定資産\0G.税務上資産組入リスト作成\
+\\qmusgt00225\RPA\08.UAT\MAS\固定資産\0G.税務上資産組入リスト作成\</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FILE_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">01.設定</property>
+      <property name="comment" class="String">設定情報ファイルが保存されているフォルダの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FILE_NAME_TEMPLATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">設定情報ファイル_0G税務上資産組入予定リスト作成ロボ.xlsx</property>
+      <property name="comment" class="String">設定情報ファイルのファイル名称テンプレート
+XX_設定情報ファイル_04税務上資産組入予定リスト作成ロボ.xlsx
+となり、XXにはDA機の(フォルダ上の)番号が入る
+(DA機のラベルではない)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SETTING_FISCAL_YEAR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">実行年度</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ROBOT_STATUS_RUNNING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【ロボ処理中】</property>
+      <property name="comment" class="String">実行中のロボットが実行条件入力ファイルを保持している状態を表す</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_01</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">DAフォルダ</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">01.MHI環境1</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_02</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">02.MHI環境2</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_03</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">11.MHPS環境1</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_04</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">12.MHPS環境2</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_05</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">21.事業会社環境1</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_06</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">22.事業会社環境2</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_07</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">31.G会社環境1</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_08</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">32.G会社環境2</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_09</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">41.全環境1</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_10</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">42.全環境2</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_11</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">03.MHI環境3</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_12</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">04.MHI環境4</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_13</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">05.MHI環境5</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_14</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">13.MHPS環境3</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_15</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">23.事業会社環境3</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_16</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">33.G会社環境3</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DA_FOLDER_17</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">34.G会社環境4</property>
+      <property name="comment" class="String">DAフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">OLD_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">old\</property>
+      <property name="comment" class="String">工事番号を記載したテキストファイルのバックアップを保存するフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MANUAL_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">手入力\</property>
+      <property name="comment" class="String">工事番号を記載した手入力ファイルのバックアップを保存するフォルダ名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_SUCCESS</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">メールフォーマット</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【%COMPANY_ABBREVIATION%】税務上資産組入予定リスト作成ロボ 正常終了</property>
+      <property name="comment" class="String">正常終了メール件名
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_WARNING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【%COMPANY_ABBREVIATION%】税務上資産組入予定リスト作成ロボ 正常終了(組入対象データなし)</property>
+      <property name="comment" class="String">正常終了（組入対象データなし）メール件名
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_TITLE_ERR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">【%COMPANY_ABBREVIATION%】税務上資産組入予定リスト作成ロボ エラー終了</property>
+      <property name="comment" class="String">エラー終了メール件名
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_SUCCESS</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+%COMPANY_ABBREVIATION%の組入予定リスト作成が終了しました。
+処理結果をご確認ください。
+
+■組入予定リスト
+
+フォルダパス：&lt;%FOLDER_PATH%%FILE_NAME%&gt;
+
+
+※このメールアドレスには返信できません。</property>
+      <property name="comment" class="String">正常終了メール本文</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_SUCCESS_PASTE_OVER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+%COMPANY_ABBREVIATION%の組入予定リスト作成が終了しました。
+処理結果をご確認ください。
+
+■組入予定リスト
+
+フォルダパス：&lt;%FOLDER_PATH%%FILE_NAME%&gt;
+
+%PASTE_OVER%
+
+※このメールアドレスには返信できません。</property>
+      <property name="comment" class="String">正常終了メール本文：組入予定リストの貼り付けデータ件数が設定値を越えている場合に設定する</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_WARNING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+%COMPANY_ABBREVIATION%の組入予定リスト作成処理を実施しましたが、SAPからのデータダウンロードがありませんでした。
+組入予定リストファイルは作成されていません。
+
+※このメールアドレスには返信できません。
+</property>
+      <property name="comment" class="String">正常終了(検索結果無し)終了メール本文
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MAIL_BODY_ERR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">宛先各位
+
+ロボットの処理時にエラーが発生しました。
+以下のエラーメッセージをご確認ください。
+
+■エラー内容
+
+%ERROR_MESSAGE%
+
+
+※このメールアドレスには返信できません。</property>
+      <property name="comment" class="String">異常終了メール本文
+%ERROR_MESSAGE%：発生したエラー内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_NOTFOUND_SETTINGFILE</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">エラーメッセージ（エラー終了用）</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">設定情報ファイルの読み込みに失敗しました。ファイル名、ファイルの保存場所を確認してください。
+
+
+■設定情報一覧ファイル
+
+ファイルパス：&lt;%SETTING_FILEPATH%%SETTING_FILENAME%&gt;</property>
+      <property name="comment" class="String">設定情報一覧が見つからない</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_NOTFOUND_SETTINGFILEDATA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">設定情報ファイルの読み込みに失敗しました。設定情報ファイルの記載内容を確認してください。
+
+
+■設定情報ファイル
+
+ファイルパス：&lt;%SETTING_FILEPATH%%SETTING_FILENAME%&gt;</property>
+      <property name="comment" class="String">設定情報一覧から必要な情報を取得できない</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_NOTFOUND_TEMPLATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">テンプレートファイルが存在しません。以下のパスに格納してください。
+
+
+■テンプレートファイル
+
+ファイルパス：&lt;%FOLDER_PATH%%FILE_NAME%&gt;</property>
+      <property name="comment" class="String">テンプレートファイルの存在を確認できない</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_NOTFOUND_EXECUTION_CONDITION_FILE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルが存在しません。以下のパスに格納してください。
+
+
+■実行条件入力ファイル
+
+ファイルパス：&lt;%FOLDER_PATH%%FILE_NAME%&gt;</property>
+      <property name="comment" class="String">実行条件入力ファイルが存在しないとき</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_NOTFOUND_USER_FOLDER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">利用するフォルダが存在しません。
+フォルダを作成して、再度実行してください。
+
+
+■利用フォルダ
+
+フォルダパス：%FOLDER_PATH_LIST%</property>
+      <property name="comment" class="String">ループ中に、指定した会社略称のフォルダパスを見つけられない場合</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_FILE_UPDATE_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルを更新することができません。
+編集中でないことを確認し再度実行してください。
+
+■実行条件入力ファイル
+
+ファイルパス：&lt;％FOLDER_PATH％％FILE_NAME％&gt;</property>
+      <property name="comment" class="String">実行条件ファイルが編集中でファイル名を変更することができない</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_INPUT_EXECUTION_KAIKEI_TERM_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルのInput項目に誤りがあります。
+Input項目を確認してください。
+
+
+■実行条件入力ファイル
+
+ファイルパス：&lt;％FOLDER_PATH％％FILE_NAME％&gt;
+
+会計年度：％会計年度％
+
+会計期間：％会計期間％</property>
+      <property name="comment" class="String">会計期間/年度が(すべて設定されている/全て設定されていない)以外の状態のとき</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_INPUT_NO_EXECUTION_TARGET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルで、実行条件列が何も選択されていません。
+組入リストを作成したい会社の行の実行条件選択列に、○を入力して保存し、再度実行してください。
+
+
+■実行条件入力ファイル
+
+ファイルパス：&lt;％FOLDER_PATH％％FILE_NAME％&gt;</property>
+      <property name="comment" class="String">実行条件入力ファイルの選択列に○が1行もない状態</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_OLD_FILE_DELETE_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">前回実行時に使用したファイルを削除することができません。
+編集中でないことを確認してください。
+
+
+■対象ファイル
+
+ファイルパス：&lt;％FOLDER_PATH％％FILE_NAME％&gt;</property>
+      <property name="comment" class="String">前回時に作成したファイルを削除する</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_SAP_LOGIN_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPにログインできませんでした。
+設定情報ファイル、実行条件ファイルに記載されているユーザーID、パスワード、SAP接続先名、SAPクライアントを確認し、ロボットを再度実行してください。
+
+
+■設定情報ファイル
+
+ファイルパス：&lt;％SETTING_FOLDER_PATH％％SETTING_FILE_NAME％&gt;
+
+■実行条件入力ファイル
+
+ファイルパス：&lt;％CONDITION_FOLDER_PATH％％CONDITION_FILE_NAME％&gt;</property>
+      <property name="comment" class="String">SAPログインエラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_SAP_VIEW_TRANSITION_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、機能画面への遷移に失敗しました。
+呼び出す機能のトランザクションコードが変更された可能性があります。
+システム管理者に連絡してください。
+
+
+■接続情報
+
+ログイン先SAPサーバ：&lt;%SAP_SERVER%&gt;
+
+トランザクションコード：&lt;%TRANSACTION_CODE%&gt;
+
+画面名：&lt;%VIEW_NAME%&gt;</property>
+      <property name="comment" class="String">SAPにて画面の遷移に失敗</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_SAP_VARIANT_CALL_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">バリアントの呼び出しに失敗しました。
+登録されているバリアントの名称が変更された可能性があります。
+システム管理者に連絡してください。
+
+
+■接続情報
+
+ログイン先SAPサーバ：&lt;%SAP_SERVER%&gt;
+
+トランザクションコード：&lt;%TRANSACTION_CODE%&gt;
+
+画面名：&lt;%VIEW_NAME%&gt;
+
+バリアント名：&lt;%VARIANT_NAME%&gt;</property>
+      <property name="comment" class="String">バリアントの呼び出しに失敗</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_SAP_DATA_DOWNLOAD_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPからのデータのダウンロードに失敗しました。
+システム管理者に連絡してください。
+
+
+■接続情報
+
+ログイン先SAPサーバ：&lt;%SAP_SERVER%&gt;
+
+トランザクションコード：&lt;%TRANSACTION_CODE%&gt;
+
+画面名：&lt;%VIEW_NAME%&gt;
+
+保存ファイルパス：&lt;%SAVE_FILE_PATH%&gt;</property>
+      <property name="comment" class="String">SAPからデータのダウンロードに失敗したとき</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_MACRO_EXECUTE_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">マクロの実行に失敗しました。
+下記情報をシステム管理者に連絡してください。
+
+
+■マクロ実行情報
+
+実行コマンド：&lt;%EXECUTE_COMMAND%&gt;</property>
+      <property name="comment" class="String">マクロの実行に失敗した際のメッセージ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_FILE_COPY_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">ファイルのコピーに失敗しました。
+ファイル・フォルダの利用状況を確認してください。
+
+
+■コピー情報
+
+コピー元ファイルパス：&lt;%MOVE_FROM%&gt;
+
+コピー先ファイルパス：&lt;%MOVE_TO%&gt;</property>
+      <property name="comment" class="String">ファイルの移動に失敗したときの通知メッセージ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">common_ERRMSG_DA_COMMON_ERROR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">端末の操作にエラーが発生しました。
+システム管理者に問い合わせてください。
+
+
+■処理情報
+
+停止した処理：&lt;%STOPPED_PROCESS%&gt;</property>
+      <property name="comment" class="String">DA操作中に発生する汎用エラー</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_INPUT_SAP_CONNECT_INFOMATION_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">実行条件入力ファイルの参照リスト内容が読み取れませんでした。
+ファイルの内容を確認してください。
+
+■実行条件入力ファイル
+会社略称       ：&lt;%COMPANY_ABBREVIATION%&gt;
+SAPクライアント：&lt;%SAP_CLIENT%&gt;
+会社コード     ：&lt;%COMPANY_CODE%&gt;
+SAP接続先名    ：&lt;%SAP_CONNECTION_NAME%&gt;
+予算バージョン ：&lt;%BUDGET_VERSION%&gt;</property>
+      <property name="comment" class="String">実行条件入力ファイルの参照リスト(SAP接続情報)に不足がある場合に通知する内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_CONTENT_INPUT_EXECUTION_KAIKEI_TERM_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">下記項目はすべて入力するか、すべて空欄である必要があります。
+会計年度        ：%fiscalYear%
+会計期間        ：%accountingPeriod%
+勘定処理月の末日：%endOfMonth%</property>
+      <property name="comment" class="String">会計期間/年度/勘定処理月の末日が(すべて設定されている/全て設定されていない)以外の状態のとき</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_SAP_DATA_UPLOAD_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">ファイルアップロードに失敗しました。
+アップロードファイルの保存状態を確認して下さい。
+解決しない場合はシステム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+画面名                   ：&lt;%screenName%&gt;
+アップロードファイルパス ：&lt;%uploadFilePath%&gt;</property>
+      <property name="comment" class="String">SAPにテキストファイルをアップロードできない場合</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_SAP_NEXT_SCREEN_CALL_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">SAPで、操作に必要な画面を認識できませんでした。
+システム管理者に連絡してください。
+
+■SAP情報
+ログイン先SAP接続先名    ：&lt;%SAPserver%&gt;
+ログイン先SAPクライアント：&lt;%SAPclient%&gt;
+トランザクションコード   ：&lt;%transactionCode%&gt;
+画面名                   ：&lt;%screenName%&gt;
+呼出画面                 ：&lt;%calNextScreen%&gt;</property>
+      <property name="comment" class="String">SAP操作中に、検索条件設定や検索結果画面の呼出を実施したが、複数回画面遷移を調査しても、目的の画面が表示されないときの通知内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ERRMSG_MAIL_SEND_FAILURE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">メールの送信処理に失敗しました。
+
+下記情報を確認のうえ、メールサーバ、ネットワークの状態を確認してください。
+
+メールサーバ：&lt;%MAIL_SERVER%&gt;
+サーバポート：&lt;%SERVER_PORT%&gt;
+送信元アドレス：&lt;%MAIL_SEND_FROM%&gt;
+送信先アドレス（To）：&lt;%MAIL_SEND_TO%&gt;
+送信先アドレス（Cc）：&lt;%MAIL_SEND_CC%&gt;
+メール件名：&lt;%MAIL_SUBJECT%&gt;
+メール本文：
+%MAIL_BODY%</property>
+      <property name="comment" class="String">メール送信に失敗した際にログに出力する内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WARMSG_PASTE_OVER</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="defaultValue" class="String">■警告
+
+フォームの数式で参照している件数を超えているため、数式を追加した上で作業下さい。
+件数を超えているシートは以下の通りです。%SHEET_LIST%</property>
+      <property name="comment" class="String">組入予定リストのデータペーストが、想定件数を越えている場合に、正常終了メールに追記する</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_GROUP_NAME</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">SAP設定</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">グループ会社</property>
+      <property name="comment" class="String">グループ会社の名前</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZMFI145_MHI_CODE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI145</property>
+      <property name="comment" class="String">資産マスタ検索画面　トランザクションコード
+MHI</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZMFI145_MHI_TITLE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ検索</property>
+      <property name="comment" class="String">ZMFI145の画面タイトル</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZMFI174_MHI_CODE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZMFI174</property>
+      <property name="comment" class="String">社内ソフトウェア管理リスト　トランザクションコード
+MHI</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZMFI174_MHI_TITLE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">自社利用ソフトウェア管理リスト</property>
+      <property name="comment" class="String">ZMFI174画面名
+自社利用ソフトウェア管理リスト
+</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZKFI145_GROUP_CODE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI145</property>
+      <property name="comment" class="String">資産マスタ検索画面　トランザクションコード
+GROUP</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZKFI145_GROUP_TITLE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ検索</property>
+      <property name="comment" class="String">ZKFI145
+画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZKFI166_GROUP_CODE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">ZKFI166</property>
+      <property name="comment" class="String">社内ソフトウェア管理リスト　トランザクションコード
+GROUP</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_TRAN_ZKFI166_GROUP_TITLE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">自社利用ソフトウェア管理リスト</property>
+      <property name="comment" class="String">ZKFI166
+画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_VARIANT_NAME_ASSET_MASTER_SEARCH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA_(税)追加</property>
+      <property name="comment" class="String">資産マスタ検索で利用するバリアントの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_VARIANT_NAME_ASSET_MASTER_SHINKIKUMIIRE_SEARCH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA組入資産20</property>
+      <property name="comment" class="String">マスタデータ検索時に利用する検索バリアント名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_VARIANT_NAME_SOFTWARE_MANAGEMENT_TSUIKAKEIJO_SEARCH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA_税ﾘｽﾄ追</property>
+      <property name="comment" class="String">追加計上額の抽出処理で、社内ソフトウェア管理リストの検索バリアントに設定するバリアントの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_VARIANT_NAME_SOFTWARE_MANAGEMENT_SHINKIKUMIIRE_SEARCH</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">/RPA_税ﾘｽﾄ</property>
+      <property name="comment" class="String">新規組入予定案件の抽出処理で、社内ソフトウェア管理リストの検索バリアントに設定するバリアントの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_ASSET_MASTER_DL_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">組入前作業資料.xls</property>
+      <property name="comment" class="String">資産マスタ検索から指図番号を抽出するためにダウンロードするファイルの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_ASSET_MASTER_TOSHI_SASHIZU_LIST</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">投資指図一覧.txt </property>
+      <property name="comment" class="String">追加計上額の抽出に利用する投資指図リストのファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_ASSET_MASTER_SASHIZU_NUMBER_LIST_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">指図番号一覧.txt </property>
+      <property name="comment" class="String">新規組入予定案件のデータ抽出に用いる、指図番号をリスト化したテキストファイル名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_ASSET_MASTER_DATA_LIST_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタデータ.xls</property>
+      <property name="comment" class="String">資産マスタ検索からダウンロードしたマスタデータを保存するファイル名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SOFTWARE_MANAGEMENT_ADDITION_ACCRUAL_YOSAN_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">追加計上_予算_社内ソフトウェア管理リスト.xls</property>
+      <property name="comment" class="String">追加計上額(予算)の抽出処理で、SAPからダウンロードしたファイルにつけるファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SOFTWARE_MANAGEMENT_ADDITION_ACCRUAL_JISSEKI_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">追加計上_実績_社内ソフトウェア管理リスト.xls</property>
+      <property name="comment" class="String">追加計上額(実績)の抽出処理で、SAPからダウンロードしたファイルにつけるファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SOFTWARE_MANAGEMENT_SHINKI_KUMIIRE_YOTEI_ANKEN_YOSAN_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">新規組入予定対象案件_予算_社内ソフトウェア管理リスト.xls</property>
+      <property name="comment" class="String">新規組入予定対象案件(予算)の抽出処理で、SAPからダウンロードしたファイルにつけるファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SOFTWARE_MANAGEMENT_SHINKI_KUMIIRE_YOTEI_ANKEN_JISSEKI_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">新規組入予定対象案件_実績_社内ソフトウェア管理リスト.xls</property>
+      <property name="comment" class="String">新規組入予定対象案件(実績)の抽出処理で、SAPからダウンロードしたファイルにつけるファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SAP_SCREEN_TRANSITION_LOOP_LIMIT</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">10</property>
+      <property name="comment" class="String">画面遷移を確認する際に、最大何回チェック機構を実施するか</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WEB_DOCUMENT_CATEGORY</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">Web固定資産システム</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">自社利用ソフト</property>
+      <property name="comment" class="String">Web固定資産システムにて、検索条件の文書区分選択の際に選択
+
+データあり：自社利用ソフト
+データなし：専用治工具</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">WEB_FILENAME_CONSTRUCTION_ORDER_LIST</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">Web固定資産システム</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">工事命令書検索結果リスト.csv</property>
+      <property name="comment" class="String">Web固定資産システムにて、検索結果一覧出力する際のファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DB_OUTPUT_KUMIIRE_TAISHO_SASHIZU_FILENAME</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">組入対象指図.txt</property>
+      <property name="comment" class="String">データベースにある取得した組入対象指図（工事番号）を書き出すファイル名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TABLE_KOUJI_NO</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">DB</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">BR_MAS_08_FIXED_ASSET_06_T_KOUJI_NO</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_ASSET_MASTER_SCREEN_TRANSITION</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">ステップ名称(DA含む)</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">資産マスタ画面遷移</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_ASSET_MASTER_CONDITION_SETTING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">投資指図検索条件入力</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_ASSET_MASTER_SEARCH_EXECUTION</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">投資指図検索実行</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_SOFTWARE_MANAGEMENT_SCREEN_TRANSITION</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">社内ソフトウェア管理リスト画面に移動</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_SOFTWARE_MANAGEMENT_CONDITION_SETTING</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">追加計上額抽出検索条件入力</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_SOFTWARE_MANAGEMENT_SEARCH_EXECUTION</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">追加計上額抽出検索実行</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_ASSET_MASTER_DATA_SEARCH_CONDITION</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">新規組入予定資産マスタデータ検索条件入力</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">STEP_NAME_SAP_ASSET_MASTER_DATA_SEARCH_EXECUTION</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">新規組入予定資産マスタデータ検索実行</property>
+      <property name="comment" class="String">ステップグループの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_FORMAT_AND_PASTE_SOFTWARE_MANAGEMENT_LIST</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">マクロ設定</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">formatAndPaste_OwnCompanyUseSoftwareManagementList</property>
+      <property name="comment" class="String">抽出した追加計上額を(税)組入予定リストに転記するマクロの名称
+引数
+1 : 抽出した追加計上額ファイルが保存されているフォルダパス
+2 : 抽出した追加計上額ファイル名称
+3 : 転記先ファイルの保存フォルダパス
+4 : 転記先ファイルのファイル名称
+5 : 転記先ファイルの転記先シート名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_FORMAT_AND_PASTE_ASSET_MASTER_DATA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">formatAndPaste_AssetMasterData</property>
+      <property name="comment" class="String">抽出した資産マスタデータを(税)組入予定リストに転記するマクロの名称
+引数
+1 : 抽出した新規組入予定案件ファイルが保存されているフォルダパス
+2 : 抽出した新規組入予定案件ファイル名称
+3 : 転記先ファイルの保存フォルダパス
+4 : 転記先ファイルのファイル名称
+5 : 転記先ファイルの転記先シート名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_KUMIIRE_YOTEI_TITLE_UPDATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">kumiireYotei_titleUpdate</property>
+      <property name="comment" class="String">組入予定リストのシートタイトルを更新するマクロ名称
+引数
+1 : 書き込み先ファイルの保存フォルダパス
+2 : 書き込み先ファイルのファイル名称
+3 : 書き込み先ファイルの転記先シート名
+4 : 上書きするタイトルの文字列
+5 : 何らかの文字列(他の関数呼び出しと引数を揃えるために設定。設定した値の利用は全くない)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_SASHIZU_NUMBER_EXTRACTOR</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">sashizuNumberExtractor</property>
+      <property name="comment" class="String">SAPからDLした資産マスタのローカルファイル(スプレッドシート)から、指図番号を抽出してテキストファイル出力するマクロ名
+1 : 読込ファイルの保存フォルダパス
+2 : 読込ファイルのファイル名称
+3 : 書き込みファイルの保存フォルダパス
+4 : 書き込みファイルのファイル名称
+5 : 何らかの文字列(他の関数呼び出しと引数を揃えるために設定。設定した値の利用は全くない)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_SASHIZU_NUMBER_EXTRACT_FROM_KUMIIRE_SHEET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">sashizuNumberExtractFromKumiireSheet</property>
+      <property name="comment" class="String">組入予定リストから、指図番号を抽出してテキストファイル出力するマクロ名
+1 : 読込ファイル(組入予定リスト)の保存フォルダパス
+2 : 読込ファイル(組入予定リスト)のファイル名称
+3 : 書き込みファイルの保存フォルダパス
+4 : 書き込みファイルのファイル名称
+5 : 何らかの文字列(他の関数呼び出しと引数を揃えるために設定。設定した値の利用は全くない)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_NUMBER_OF_ROWS_IN_SHEET</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">numberOfRowsInSheet</property>
+      <property name="comment" class="String">起点セルのCurrentRegion範囲の行数を返すマクロ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MACRO_NAME_KUMIIRE_SHORI_JISSHI_DUKI_UPDATE</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">kumiireShoriJisshiDukiUpdate </property>
+      <property name="comment" class="String">組入処理実施月の更新</property>
+    </object>
+  </property>
+</object>
