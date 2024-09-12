@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="TaskkillAndClearClipBoard"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="TaskkillAndClearClipBoard_DA054" type-name="TaskkillAndClearClipBoard"/>
+    </typed-variables>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings>
+      <mapping name="DA054"/>
+    </device-mappings>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">TaskkillAndClearClipBoard_DA054</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">TaskkillAndClearClipBoard</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">タスクキル&amp;クリアクリップボード スニペット
+
+【機能】
+指定されたTASKKILLバッチファイルを実行。
+少し間をおいたのち、
+指定されたClearClipboardバッチファイルを実行。
+正常に閉じたか否かの確認は行っていない。
+
+設定事項は下記のとおりです。
+cmdTaskkill
+	タスクキルバッチファイルのフルパス
+cmdClearClipboard
+	クリアクリップボードバッチファイルのフルパス
+
+【Error判定】
+ErrorFlg=0：成功
+ErrorFlg=1：失敗
+
+
+
+</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">Assign Error Flg</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">0</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">TaskkillAndClearClipBoard_DA054.ErrorFlg</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment" class="String">初期値</property>
+        <property name="enabled" class="Boolean" id="2">true</property>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Try" id="3">
+        <property name="name" class="String" id="4">TaskkillまたはClearClipboardエラー判定</property>
+        <property name="comment" class="String">正常=0　Try1
+失敗=1　Try2</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">DA TASKKILL</property>
+        <property name="stepAction" class="CallRL2Robot">
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">TaskkillAndClearClipBoard_DA054.cmdTaskkill</property>
+                </property>
+              </property>
+            </object>
+          </property>
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">DA054</property>
+              </property>
+            </object>
+          </property>
+          <property name="robot2Bean" class="kapow.robot.plugin.common.stepaction.rl2.Robot2Bean">{
+  "meta":{
+    "className":"Robot",
+    "version":1
+  },
+  "gizmo":{
+    "outputTypes": [],
+    "parameters": [{
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "TK" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
+    }],
+    "types": [],
+    "variables": [],
+    "block": {
+      "meta":{
+        "className":"Block",
+        "version":1
+      },
+      "gizmo":{
+        "steps": [{
+          "meta":{
+            "className":"OpenStep",
+            "version":1
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "finder": {
+              "meta":{
+                "className":"DeviceFinder",
+                "version":0
+              },
+              "gizmo":{
+                "name": {
+                  "meta":{
+                    "className":"FinderName",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "id": { "string": "" }
+                  }
+                },
+                "reference": {
+                  "meta":{
+                    "className":"NoFinderReference",
+                    "version":0
+                  },
+                  "gizmo":{
+                    
+                  }
+                },
+                "selectors": {
+                  "meta":{
+                    "className":"DeviceSelectorChain",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "deviceSelector": {
+                      "meta":{
+                        "className":"HubMappingUse",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "id": { "string": "DA054" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "uri": {
+              "meta":{
+                "className":"Expression",
+                "version":0
+              },
+              "gizmo":{
+                "text": { "string": "=TK" }
+              }
+            }
+          }
+        },
+        {
+          "meta":{
+            "className":"ReturnStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "values": []
+          }
+        }]
+      }
+    }
+  }
+}</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="4"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment" class="String">【機能】
+画面を強制的に閉じる。（TASKKILL）
+
+【詳細】
+taskkill.batを実行する。
+
+【INPUT】
+TK
+　taskkill.batの所在
+
+【OUTPUT】
+なし  
+</property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">DA CLEAR CLIPBOARD</property>
+        <property name="stepAction" class="CallRL2Robot">
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">TaskkillAndClearClipBoard_DA054.cmdClearClipboard</property>
+                </property>
+              </property>
+            </object>
+          </property>
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">DA054</property>
+              </property>
+            </object>
+          </property>
+          <property name="robot2Bean" class="kapow.robot.plugin.common.stepaction.rl2.Robot2Bean">{
+  "meta":{
+    "className":"Robot",
+    "version":1
+  },
+  "gizmo":{
+    "outputTypes": [],
+    "parameters": [{
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "CC" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
+    }],
+    "types": [],
+    "variables": [],
+    "block": {
+      "meta":{
+        "className":"Block",
+        "version":1
+      },
+      "gizmo":{
+        "steps": [{
+          "meta":{
+            "className":"GuardedChoiceStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "branches": [{
+              "meta":{
+                "className":"GuardAndBlock",
+                "version":2
+              },
+              "gizmo":{
+                "guard": {
+                  "meta":{
+                    "className":"TimeOutGuard",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "seconds": {
+                      "meta":{
+                        "className":"Expression",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "text": { "string": "1" }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "meta":{
+                    "className":"Block",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "steps": []
+                  }
+                }
+              }
+            }]
+          }
+        },
+        {
+          "meta":{
+            "className":"OpenStep",
+            "version":1
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "finder": {
+              "meta":{
+                "className":"DeviceFinder",
+                "version":0
+              },
+              "gizmo":{
+                "name": {
+                  "meta":{
+                    "className":"FinderName",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "id": { "string": "" }
+                  }
+                },
+                "reference": {
+                  "meta":{
+                    "className":"NoFinderReference",
+                    "version":0
+                  },
+                  "gizmo":{
+                    
+                  }
+                },
+                "selectors": {
+                  "meta":{
+                    "className":"DeviceSelectorChain",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "deviceSelector": {
+                      "meta":{
+                        "className":"HubMappingUse",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "id": { "string": "DA054" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "uri": {
+              "meta":{
+                "className":"Expression",
+                "version":0
+              },
+              "gizmo":{
+                "text": { "string": "=CC" }
+              }
+            }
+          }
+        },
+        {
+          "meta":{
+            "className":"ReturnStep",
+            "version":0
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "values": []
+          }
+        }]
+      }
+    }
+  }
+}</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="4"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment" class="String">【機能】
+クリップボードの中身を空にする。
+コピーペーストの誤りを防止するため。
+また、タスクキル後の誤作動(ログイン失敗)を防止する目的としても使用。
+
+【詳細】
+ClearClipboard.batを実行する。
+
+【INPUT】
+CC
+　ClearClipboard.batの所在
+
+【OUTPUT】
+なし  
+</property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Assign Error Flg</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">1</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">TaskkillAndClearClipBoard_DA054.ErrorFlg</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment" class="String">エラー</property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="8"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+    </edges>
+  </body>
+</object>

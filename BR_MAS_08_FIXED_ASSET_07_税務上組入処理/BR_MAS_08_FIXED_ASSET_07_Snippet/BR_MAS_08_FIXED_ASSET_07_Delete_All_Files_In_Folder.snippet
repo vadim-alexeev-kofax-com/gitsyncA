@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="BR_MAS_08_FIXED_ASSET_07_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_07_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_07_local"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="CNST" type-name="BR_MAS_08_FIXED_ASSET_07_CONST"/>
+      <typed-variable name="gbl" type-name="BR_MAS_08_FIXED_ASSET_07_global"/>
+      <typed-variable name="lcl" type-name="BR_MAS_08_FIXED_ASSET_07_local"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="gbl"/>
+    </global-variables>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_local</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">lcl.targetFolderPathに指定したフォルダに対して、ファイルを全件削除する。
+デリート時にエラーが発生した場合、ErrorHndleにジャンプする。</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">フォルダ削除ループ</property>
+        <property name="stepAction" class="ForEachFile">
+          <property name="directoryNameExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.targetFolderPath</property>
+            </property>
+          </property>
+          <property name="fileNamePattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+            <property name="value" class="String">(?!\~\$).*</property>
+          </property>
+          <property name="fileNameAttribute" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">lcl.readingFilePath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders" id="2"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+        </property>
+        <property name="comment" class="String">ファイルが1件も見つからない場合は後続処理をスキップして次のブランチへ</property>
+        <property name="enabled" class="Boolean" id="3">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String" id="4">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">ErrMsg 前回実行生成ファイル削除失敗</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.FILE_DELETE_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%folderPath%",lcl.targetFolderPath)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%fileName%",replaceText(lcl.readingFilePath,lcl.targetFolderPath,""))</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsg</property>
+          </property>
+        </property>
+        <property name="elementFinders" idref="2"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element idref="4"/>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">Delete File</property>
+        <property name="stepAction" class="DeleteFile">
+          <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.readingFilePath</property>
+            </property>
+          </property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
+        </property>
+        <property name="elementFinders" idref="2"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">ErrorHandle</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="7"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+    </edges>
+  </body>
+</object>

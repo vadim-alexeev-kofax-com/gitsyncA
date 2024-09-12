@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="BR_MAS_08_FIXED_ASSET_07_CONST"/>
+      <type name="BR_MAS_08_FIXED_ASSET_07_global"/>
+      <type name="BR_MAS_08_FIXED_ASSET_07_local"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="CNST" type-name="BR_MAS_08_FIXED_ASSET_07_CONST"/>
+      <typed-variable name="gbl" type-name="BR_MAS_08_FIXED_ASSET_07_global"/>
+      <typed-variable name="lcl" type-name="BR_MAS_08_FIXED_ASSET_07_local"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="gbl"/>
+    </global-variables>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">CNST</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_CONST</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">gbl</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_global</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">lcl</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">BR_MAS_08_FIXED_ASSET_07_local</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String">問12845_マクロ対応</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">コマンド実行</property>
+        <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
+          <property name="commandLineExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.executionCommand</property>
+            </property>
+          </property>
+          <property name="extractionType" class="kapow.robot.plugin.common.stateprocessor.executecommandline.SeperateStdOutAndErrExtractionType">
+            <property name="encoding" class="Encoding">
+              <property name="encoding" class="String">windows-31j</property>
+            </property>
+            <property name="storeOutDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.commandStdOut</property>
+            </property>
+            <property name="storeErrDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.commandStdErr</property>
+            </property>
+          </property>
+          <property name="exitCodeStoredIn" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">lcl.exitCode</property>
+          </property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment" class="String">問12845_マクロ対応</property>
+        <property name="enabled" class="Boolean">false</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Try" id="2">
+        <property name="name" class="String">コマンド実行エラー</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">Test_ExitCode確認</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.exitCode == 0 || lcl.exitCode == -2</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">コマンド実行エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment" class="String">チェック条件：コマンド実行による戻り値（ExitCode）を確認する
+True：0か-2が返されたとき
+False：0、-2以外が返されたとき
+False挙動：コマンド実行エラーで分岐し、ExitCodeとメッセージを設定してエラーメールを送信し、処理を終了する
+※
+0：正常
+1：VBSの呼出そのもののエラー。エラー原因はVBSの呼出方法による部分が多い
+-1：VBS内で想定されるエラー。StdErrにエラーメッセージが出力されている。
+-2：ステータス一括変更ファイル生成でのみ発生する想定。ハンドリングは後続処理にて実施</property>
+        <property name="enabled" class="Boolean" id="4">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Try" id="5">
+        <property name="name" class="String" id="6">StdOut入力エラーチェック</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Test_ 処理結果確認</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">lcl.exitCode</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">1</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">lcl.commandStdErr</property>
+              </property>
+            </object>
+          </property>
+          <property name="mode" class="Integer">1</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders" id="8"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="6"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment" class="String">終了コードが1、かつ標準エラー出力が空の場合、標準出力の内容を標準エラー出力にコピーする</property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String" id="9">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="10">
+        <property name="name" class="String">ErrMsg コマンド実行失敗</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.CMD_MACRO_CALL_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%folderPath%",lcl.workFolderPath)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%fileName%",gbl.setExcelMacroFileName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%macroName%",lcl.executionMacroName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%code%",lcl.exitCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%message%",replaceText(lcl.commandStdErr,"\n",""))</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsg</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment" class="String">終了コードが1の場合、エラーメッセージは表示されない
+→VBSの呼出そのものに失敗しているため
+
+終了コードが-1の場合、エラーメッセージを確認し、対応する
+→「マクロ実行中にエラーが発生しました」と出力されている場合→呼び出したマクロが出力したエラー
+→上記以外の場合、VBSの処理中のエラー</property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="11">
+        <property name="name" class="String">内部エラー_ジャンプ</property>
+        <property name="stepAction" class="GenerateError"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">内部エラー</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="End" id="12"/>
+      <object class="Transition" serializationversion="3" id="13">
+        <property name="name" class="String">標準出力内容コピー</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">lcl.commandStdOut</property>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">lcl.commandStdErr</property>
+          </property>
+        </property>
+        <property name="elementFinders" idref="8"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element idref="9"/>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="14"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="2"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="14"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="10"/>
+      </object>
+    </edges>
+  </body>
+</object>

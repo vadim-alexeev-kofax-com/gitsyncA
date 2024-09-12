@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+    <referenced-types/>
+    <referenced-snippets/>
+    <typed-variables/>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables"/>
+  <comment class="String">SAPを操作するDAステップのエラーフラグに応じて、
+エラー通知をするメッセージを切り替えて、ErrorHandleにジャンプする
+
+1：SAP画面遷移エラー
+2：バリアント呼出エラー
+
+99：TimeOutError
+</comment>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Try" id="1">
+        <property name="name" class="String">DA操作成否</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="2">
+        <property name="name" class="String">DA機処理チェック</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">lcl.sapDAErrorFlg</property>
+              </property>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">0</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">DA操作成否</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="3">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Try" id="4">
+        <property name="name" class="String" id="5">DAエラー判定</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">errFlg=1 画面遷移エラー判定</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="1"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.SAP_TRANSACTION_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="8">
+        <property name="name" class="String">Write Log : 画面遷移エラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">画面遷移エラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="9">
+        <property name="name" class="String">エラー終了にジャンプ</property>
+        <property name="stepAction" class="GenerateError"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">ErrorHandle</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="End" id="10"/>
+      <object class="Transition" serializationversion="3" id="11">
+        <property name="name" class="String">errFlg=2 バリアント呼出エラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="2"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="12">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.SAP_TRANSACTION_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="13">
+        <property name="name" class="String">Write Log : バリアント呼出エラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">バリアント呼出エラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="14">
+        <property name="name" class="String">errFlg=3 データダウンロードエラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="3"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="15">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.SAP_TRANSACTION_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="16">
+        <property name="name" class="String">Write Log : データダウンロードエラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">データダウンロードエラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="17">
+        <property name="name" class="String">errFlg=4 データアップロードエラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="4"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="18">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CNST.ERRMSG_SAP_DATA_UPLOAD_FAILURE</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%uploadFilePath%",SAPErrorHandle.uploadFilePath)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="19">
+        <property name="name" class="String">Write Log : データアップロードエラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">データアップロードエラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="20">
+        <property name="name" class="String">errFlg=5 次画面表示待ちエラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="5"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="21">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CNST.ERRMSG_SAP_NEXT_SCREEN_CALL_FAILURE</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%calNextScreen%",SAPErrorHandle.sapCallNextScreenFailure)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="22">
+        <property name="name" class="String">Write Log : 次画面表示待ちエラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">次画面表示待ちエラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="23">
+        <property name="name" class="String">errFlg=6 ログアウトエラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="6"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">DAエラー判定</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="24">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.SAP_LOGOUT_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="25">
+        <property name="name" class="String">Write Log : ログアウトエラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">ログアウトエラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="26">
+        <property name="name" class="String">Assign Err Msg Wk</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">CMNMSG.SAP_TRANSACTION_ERR</property>
+                </property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPserver%",SAPErrorHandle.sapConnectionServerName)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%SAPclient%",SAPErrorHandle.client)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%transactionCode%",SAPErrorHandle.transactionCode)</property>
+              </element>
+              <element class="EvaluateExpression" serializationversion="0">
+                <property name="expression" class="String">replaceText(INPUT,"%screenName%",SAPErrorHandle.screenName)</property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">gbl.errMsgWk</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Try" id="27">
+        <property name="name" class="String" id="28">例外種別</property>
+      </object>
+      <object class="Transition" serializationversion="3" id="29">
+        <property name="name" class="String">errFlg=99 TimeOutError</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="99"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="28"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="30">
+        <property name="name" class="String">Write Log : TimeOutError</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">TimeOutError</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="31">
+        <property name="name" class="String">errFlg=98 DeviceIssue</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="98"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">例外種別</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="32">
+        <property name="name" class="String">Write Log : DeviceIssue</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">DeviceIssue</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="33">
+        <property name="name" class="String">errFlg=97 入力エラー</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">lcl.sapDAErrorFlg=="97"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">例外種別</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="34">
+        <property name="name" class="String">Write Log : 入力エラー</property>
+        <property name="stepAction" class="WriteLog2">
+          <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">入力エラー</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="35"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="2"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="35"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="14"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="17"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="20"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="23"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="12"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="14"/>
+        <to idref="15"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="15"/>
+        <to idref="16"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="16"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="17"/>
+        <to idref="18"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="18"/>
+        <to idref="19"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="19"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="20"/>
+        <to idref="21"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="21"/>
+        <to idref="22"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="22"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="23"/>
+        <to idref="24"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="24"/>
+        <to idref="25"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="25"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="26"/>
+        <to idref="27"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="31"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="33"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="29"/>
+        <to idref="30"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="31"/>
+        <to idref="32"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="32"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="33"/>
+        <to idref="34"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="34"/>
+        <to idref="9"/>
+      </object>
+    </edges>
+  </body>
+</object>

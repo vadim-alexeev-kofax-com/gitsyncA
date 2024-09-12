@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.2.0.0</version>
+    </saved-by-versions>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">startSysDate</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">起動時刻</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+      <property name="comment" class="String">起動時刻</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sysYearForFiscalYearCalc</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+      <property name="comment" class="String">会計年度計算用起動時刻西暦</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sysMonthForAccountngPeriodCalc</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">会計期間計算用起動時刻月</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">formattedDate</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">起動時刻のyyyyMMddHHmm形式文字
+添付するzipファイル名に設定される</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">slashFormattedDate</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="2"/>
+      <property name="comment" class="String">起動時刻のyyyy/MM/dd形式文字
+一括取引記帳処理の伝票日付に入力する</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">useDAFolder</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">使用するDA機のフォルダ名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">useDAFolderNumber</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">使用するDA機のフォルダ名の番号(先頭2桁)</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">settingFileFolderPath</property>
+      <property name="separatorTitle" class="String">設定情報ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">設定情報ファイルの保存フォルダパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">settingFileName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">設定情報ファイルのファイル名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">compressedFileName</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">圧縮ファイル</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">圧縮ファイルの名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">compressedFileBinary</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BinaryAttributeType"/>
+      <property name="comment" class="String">圧縮ファイルのバイナリ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">mailTo</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">送付メール設定</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">メール送信先：To</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">mailCc</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">メール送信先：Cc</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">mailSubject</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">メール件名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">mailBody</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="comment" class="String">メール本文</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoSelect</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">実行条件入力ファイル</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：選択</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoCompanyShortName</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：会社略称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoSapServer</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：SAPサーバ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoSapServerNo</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：サーバNo</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoSapClient</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：SAPクライアント</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoCompanyCode</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：会社コード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoCompanyFullName</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：会社名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">execInfoSapConnection</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行条件入力ファイル：SAP接続先名称</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapUser</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">SAP利用情報</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">SAPユーザ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapPassword</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">SAPパスワード</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapOPAGijutsutekiKanryoTRCD</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">OPA技術的完了TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapOPAGijutsutekiKanryoScName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">OPA技術的完了画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapIkkatsuTorihikiKichoTRCD</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">一括取引記帳TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapIkkatsuTorihikiKichoScName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">一括取引記帳画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapMeibanDataSakuseiTRCD</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">銘板データ作成TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapMeibanDataSakuseiScName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">銘板データ作成画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanMasterTRCD</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">資産マスタTRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanMasterScName</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">資産マスタ画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanHenkoTRCD</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">資産変更TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanHenkoScName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">資産変更画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanSyutokuTRCD</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">資産取得TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanSyutokuScName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">資産取得画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanTorihikiZandakaIchiranTRCD</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="3"/>
+      <property name="comment" class="String">資産取引残高一覧TRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanTorihikiZandakaIchiranScName</property>
+      <property name="type" idref="3"/>
+      <property name="comment" class="String">資産取引残高一覧画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapShisanTorihikiZandakaIchiranReportScName</property>
+      <property name="type" idref="3"/>
+      <property name="comment" class="String">資産取引残高一覧レポート画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapMainMenuTRCD</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">SAPメインメニューTRCD</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sapMainMenuScName</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">SAPメインメニュー画面名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">daErrorFlg</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">SAP_DA操作関係</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="comment" class="String">DAステップの実行状況を受け取る</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">daProcessName</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">DS上のDAステップ名（何の処理を実施しているか）
+※エラーハンドル用</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">workFolderPath</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">作業対象フォルダ/ファイル</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">作業用一時フォルダのパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">compressedFolderPath</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">圧縮対象のフォルダ
+・組入予定リスト
+・SAPからのDLデータ
+・(あれば)エラーレポート が入る</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">kumiireYoteiListFolderPath</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">予定リスト作成ロボが作ったファイルの保存先</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">kumiireYoteiListFileName</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">予定リストのファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputIkkatsuKichoFileName</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">一括取引記帳出力結果ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputShisanReportKanjoFileName</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">資産取得レポート（勘定毎）ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputShisanReportMeisaiFileName</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">資産取得レポート（明細）ファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputIkkatuKichoProdExecErrorReportFileName</property>
+      <property name="type" idref="1"/>
+      <property name="comment" class="String">一括取引記帳本番実行エラーレポートファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputShisanTorihikiReportFileName</property>
+      <property name="type" idref="3"/>
+      <property name="comment" class="String">資産取引残高一覧レポートファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputIkkatuKichoPreExecErrorDocumentFileName</property>
+      <property name="type" idref="3"/>
+      <property name="comment" class="String">一括取引記帳記帳前確認エラーファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputShisanMstUpdateErrorFileName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">資産マスタ変更のエラー発生時のエラーファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">outputStatusUpdateErrorFileName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">指図ステータス変更でエラーが発生した際に保存する、エラーファイルのファイル名</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">executionCommand</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">コマンド関係</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行するコマンド</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">executionMacroName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">実行するマクロの名称。エラーメッセージ作成に使用する。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">commandArguments</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="4"/>
+      <property name="comment" class="String">マクロに渡す引数。""で囲み、列挙の場合は半角スペースで区切る。</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">commandStdOut</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">stdOutに出力される内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">commandStdErr</property>
+      <property name="type" idref="4"/>
+      <property name="comment" class="String">stdErrに出力される内容</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">exitCode</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">実行の結果返されるコード（コマンド自体が返すコード）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">readingFilePath</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">繰り返し処理用</property>
+      <property name="type" idref="0"/>
+      <property name="comment" class="String">ループ処理内の対象ファイルフルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">targetFolderPath</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">スニペット利用</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">フォルダ内削除スニペット利用時に指定するフォルダのフルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">documentSavePath</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">ドキュメント保存チェック時に指定するファイルのフルパス</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfCapturingErr</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">組入指図ステータス変更</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">組入指図ステータス変更の取込エラー件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">bulkBookkeepingErrorMsgList</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">一括記帳</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.TextAttributeType"/>
+      <property name="comment" class="String">一括記帳テスト実行時のエラーメッセージリスト</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfMstDataUpdate</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">マスタ変更</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="comment" class="String">組入予定リストから取得した資産マスタ変更の件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfMstChangeInput</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">資産マスタ変更</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">マスタ変更結果：取込件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfMstChangeRegist</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">マスタ変更結果：登録件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfMstChangeError</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">マスタ変更結果：エラー件数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">reportExist</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">資産取得レポート</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+      <property name="defaultValue" class="String">false</property>
+      <property name="comment" class="String">レポート存在フラグ</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">numOfRowsInSheet</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">貼付行数チェック</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="comment" class="String">Excelシート内の行数</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">readTsvColumn</property>
+      <property name="showSeparatorBefore" class="Boolean">true</property>
+      <property name="separatorTitle" class="String">金額チェック</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="5"/>
+      <property name="comment" class="String">金額チェック用ファイルの1区切り文のテキストを格納（読み取り用）</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">yoteiListTotalAmount</property>
+      <property name="type" idref="5"/>
+      <property name="comment" class="String">今回組入額①の値</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">yoteiListTotalAmountint</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="comment" class="String">今回組入額①の値の数値型</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">tempStringToInteger</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="comment" class="String">取得した文字列が数値として変換できる場合、変換結果を設定する。変換の確認にのみ使用し、格納された値は利用しない。</property>
+    </object>
+  </property>
+</object>
