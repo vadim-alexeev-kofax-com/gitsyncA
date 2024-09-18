@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>72575824634000</id>
+  <name>Schedule T3</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Schedule T31712783135008</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
+          <project reference="4"/>
+          <name>Schedule T3:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>âìâ{âbâg(11.5)_RB_DAS1</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>âìâ{âbâg(11.5)_RB_DAS1</name>
+                <project>Default project</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" id="11">
+              <project reference="4"/>
+              <name>âìâ{âbâg(11.5)_RB_DAS2</name>
+              <namedBlock>true</namedBlock>
+              <robot id="12">
+                <name>âìâ{âbâg(11.5)_RB_DAS2</name>
+                <project>Default project</project>
+              </robot>
+            </child>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+          <childReference id="13">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>2</scopeName>
+            <enabled>true</enabled>
+            <order>2</order>
+          </childReference>
+          <childReference id="14">
+            <child class="robotBlock" reference="11"/>
+            <scopeName>3</scopeName>
+            <enabled>true</enabled>
+            <order>3</order>
+          </childReference>
+          <childReference id="15">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>4</scopeName>
+            <enabled>true</enabled>
+            <order>4</order>
+          </childReference>
+          <childReference id="16">
+            <child class="robotBlock" reference="11"/>
+            <scopeName>5</scopeName>
+            <enabled>true</enabled>
+            <order>5</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"3âìâ{âbâg(11.5)_RB_DAS2":"R2a","4âìâ{âbâg(11.5)_RB_DAS1":"R1b","5âìâ{âbâg(11.5)_RB_DAS2":"R2b","2âìâ{âbâg(11.5)_RB_DAS1":"R1a","0âìâ{âbâg(11.5)_RB_DAS1":"R1","1âìâ{âbâg(11.5)_RB_DAS2":"R2"}</displayNameMap>
+  </blockJob>
+  <triggerUnit>1</triggerUnit>
+  <totalRuns>318</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <emails/>
+  <previousRun id="17">2024-08-12 08:05:29.0 UTC</previousRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="18">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="19">
+    <scheduler/></scheduler>
+  <revisionNumber>5bb65a7497f3cf4cae9902a0487ec2d686adac30</revisionNumber>
+  <tasksPriority>MEDIUM</tasksPriority>
+  <tasksTimeout>600000</tasksTimeout>
+  <commitMessage/>
+  <lastModified id="20">2024-08-12 08:05:06.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
