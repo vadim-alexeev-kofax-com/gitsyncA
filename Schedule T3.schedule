@@ -96,7 +96,7 @@
   </cluster>
   <scheduler class="org.quartz.impl.StdScheduler" id="19">
     <scheduler/></scheduler>
-  <revisionNumber>7ca28f19a27041ee6460e2b9701f819f17079729</revisionNumber>
+  <revisionNumber>946e7297f8d2d44057bab6ec522d15437431421e</revisionNumber>
   <tasksPriority>MEDIUM</tasksPriority>
   <tasksTimeout>600000</tasksTimeout>
   <commitMessage/>
