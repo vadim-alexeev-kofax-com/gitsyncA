@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>1842379402300</id>
+  <name>Schedule 1</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Schedule 11732709852658</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Schedule 1:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>box</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>box</name>
+                <project>Project 1</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects&gt;
+    &lt;OAuthInputObject&gt;
+      &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
+      &lt;__variableName&gt;Schedule 11732709852658#0#Schedule 1:middleBlock#0#box#credentials&lt;/__variableName&gt;
+      &lt;__propertyNames&gt;
+        &lt;string&gt;variableName&lt;/string&gt;
+        &lt;string&gt;oAuthUserId&lt;/string&gt;
+      &lt;/__propertyNames&gt;
+      &lt;__oAuthUserId&gt;1155211373000&lt;/__oAuthUserId&gt;
+      &lt;__oAuthApplicationName/&gt;
+      &lt;__oAuthUserName/&gt;
+    &lt;/OAuthInputObject&gt;
+  &lt;/__inputObjects&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0box":"box"}</displayNameMap>
+  </blockJob>
+  <triggerUnit>2</triggerUnit>
+  <totalRuns>918</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <emails/>
+  <previousRun id="10">2024-11-29 14:01:00.0 UTC</previousRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="11">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="12">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
+    <name>1842379402300</name>
+    <start id="14">2024-11-27 12:10:00.0 UTC</start>
+    <interval>180000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>f31a9bcb325b04932117939e8e47fa452899b546</revisionNumber>
+  <tasksPriority>MEDIUM</tasksPriority>
+  <tasksTimeout>600000</tasksTimeout>
+  <commitMessage/>
+  <lastModified id="15">2024-11-27 12:17:33.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
