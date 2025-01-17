@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>71306589752900</id>
+  <name>Schedule 1</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Schedule 11736508106714</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Schedule 1:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>TEST/wait-5 - Copy</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>TEST/wait-5 - Copy</name>
+                <project>second</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+          <childReference id="10">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>1</scopeName>
+            <enabled>true</enabled>
+            <order>1</order>
+          </childReference>
+          <childReference id="11">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>2</scopeName>
+            <enabled>true</enabled>
+            <order>2</order>
+          </childReference>
+          <childReference id="12">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>3</scopeName>
+            <enabled>true</enabled>
+            <order>3</order>
+          </childReference>
+          <childReference id="13">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>4</scopeName>
+            <enabled>true</enabled>
+            <order>4</order>
+          </childReference>
+          <childReference id="14">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>5</scopeName>
+            <enabled>true</enabled>
+            <order>5</order>
+          </childReference>
+          <childReference id="15">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>6</scopeName>
+            <enabled>true</enabled>
+            <order>6</order>
+          </childReference>
+          <childReference id="16">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>7</scopeName>
+            <enabled>true</enabled>
+            <order>7</order>
+          </childReference>
+          <childReference id="17">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>8</scopeName>
+            <enabled>true</enabled>
+            <order>8</order>
+          </childReference>
+          <childReference id="18">
+            <child class="robotBlock" reference="8"/>
+            <scopeName>9</scopeName>
+            <enabled>true</enabled>
+            <order>9</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"3TEST/wait-5 - Copy":"4","8TEST/wait-5 - Copy":"9","1TEST/wait-5 - Copy":"TEST/wait-5 - Copy2","6TEST/wait-5 - Copy":"7","2TEST/wait-5 - Copy":"3","5TEST/wait-5 - Copy":"6","9TEST/wait-5 - Copy":"10","4TEST/wait-5 - Copy":"5","0TEST/wait-5 - Copy":"wait-5 - Copy","7TEST/wait-5 - Copy":"8"}</displayNameMap>
+  </blockJob>
+  <triggerUnit>3</triggerUnit>
+  <totalRuns>64</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <emails/>
+  <previousRun id="19">2025-01-13 09:10:00.0 UTC</previousRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="20">
+    <name>Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="21">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="22">
+    <name>71306589752900</name>
+    <start id="23">2025-01-10 11:10:00.0 UTC</start>
+    <interval>3600000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <tasksPriority>MEDIUM</tasksPriority>
+  <tasksTimeout>600000</tasksTimeout>
+  <commitMessage/>
+  <lastModified id="24">2025-01-10 11:14:24.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
